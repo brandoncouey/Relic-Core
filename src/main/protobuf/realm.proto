@@ -1,0 +1,47 @@
+syntax = "proto3";
+package shattered.protocol;
+option java_package = "com.shattered.networking.proto";
+option cc_enable_arenas = true;
+
+
+message AccountInformation {
+    int32 accountLevel = 1;
+    string accountName = 2;
+    string currentWorld = 3;
+    int32 worldIndex = 4;
+}
+
+message CharacterInformation {
+    string name = 1;
+    string location = 2;
+    bool male = 3;
+}
+
+message CreateCharacterRequest {
+    string characterName = 1;
+    bool isMale = 2;
+}
+
+message CharacterCreationResponse {
+    int32 responseId = 1;
+}
+
+message UpdateRealmList {
+
+    message WorldEntry {
+        int32 index = 1;
+        string name = 2;
+        string location = 3;
+        string type = 4;
+        string population = 5;
+    }
+
+    repeated WorldEntry entry = 1;
+}
+
+message RequestWorldList{}
+
+message WorldLoginRequest {
+    int32 worldIndex = 1;
+    string characterName = 2;
+}

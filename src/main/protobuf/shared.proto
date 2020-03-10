@@ -1,0 +1,41 @@
+syntax = "proto3";
+package shattered.protocol;
+option java_package = "com.shattered.networking.proto";
+option cc_enable_arenas = true;
+
+message LoginRequest {
+    int32 build = 1;
+    int32 subBuild = 2;
+    int32 hotPatch = 3;
+    string username = 4;
+    string password = 5;
+    int32 requestType = 6;
+}
+
+message FriendName {
+    string name = 1;
+}
+
+//TODO add the dynamic details...
+message Friend {
+    int32 index = 1;
+    string name = 2;
+    string location = 3;
+    string serverName = 4;
+}
+
+message FriendsList {
+    repeated Friend friend = 1;
+}
+
+message LoginResponse {
+    int32 responseId = 1;
+}
+
+message RequestLogout {
+    bool realm = 1;
+}
+
+message LogoutWithResponse {
+    int32 responseId = 1;
+}

@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'shattered.relics'
+version '0.0.4'
+
+sourceCompatibility = 1.8
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+
+        mavenCentral()
+    }
+
+dependencies {
+    compile 'org.mongodb:mongo-java-driver:3.7.1'
+    compileOnly 'org.projectlombok:lombok:1.18.8'
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+    compile 'io.netty:netty-all:4.1.27.Final'
+    compile 'com.google.protobuf:protobuf-java:3.10.0'
+    compile 'com.google.protobuf:protobuf-java-util:3.10.0'
+    compile fileTree(dir: 'libs', include: '*.jar')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

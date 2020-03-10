@@ -1,0 +1,83 @@
+syntax = "proto3";
+package shattered.protocol;
+option java_package = "com.shattered.networking.proto";
+option cc_enable_arenas = true;
+
+message OpenConnection {
+    string uuid = 1;
+    string token = 2;
+}
+
+message CloseConnection {
+    string uuid = 1;
+}
+
+message ServerTransferResponse {
+    int32 serverType = 1;
+    int32 response = 2;
+}
+
+message TransmitAccount {
+    int64 accountId = 1;
+    string accountName = 2;
+    string email = 3;
+    string password = 4;
+    int32 accountLevel = 5;
+}
+
+message ServerAvailability {
+    int32 type = 1;
+}
+
+message ServerAvailabilityResponse {
+    bool available = 1;
+}
+
+message RequestRealm {
+    string cuuid = 1;
+}
+
+message TransferConnection {
+    string cuuid = 1;
+    string token = 2;
+    string host = 3;
+    int32 port = 4;
+}
+
+message TransferToWorld {
+    int32 accountId = 1;
+    string accountName = 2;
+    int32 characterId = 3;
+    string characterName = 4;
+    string password  = 5;
+    string cuuid = 6;
+    string token = 7;
+    string host = 8;
+    int32 port = 9;
+}
+
+message TransferToRealm {
+    string accountName = 1;
+    string password = 2;
+}
+
+message WorldCharacterInformation {
+    string cuuid = 1;
+    string token = 2;
+    int32 accountId = 3;
+    string accountName = 4;
+    int32 characterId = 5;
+    string characterName = 6;
+    string password = 7;
+}
+
+message RequestNewTransferConnection {
+    string tccuid = 1;
+    string cuuid = 2;
+    string token = 3;
+}
+
+message RequestWorldToRealmTransfer {
+    string accountName = 1;
+    string accountPassword = 2;
+}
