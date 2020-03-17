@@ -3,6 +3,7 @@ package com.shattered.networking.handlers;
 import com.google.protobuf.Message;
 import com.shattered.networking.NetworkHandler;
 import com.shattered.networking.listeners.ProtoEventListener;
+import com.shattered.networking.listeners.ProtoListener;
 import com.shattered.networking.proto.PacketOuterClass;
 import com.shattered.networking.session.Session;
 import com.shattered.networking.session.ext.RegisterSession;
@@ -10,6 +11,9 @@ import com.shattered.system.SystemLogger;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
+
+import java.util.Arrays;
+import java.util.Map;
 
 /**
  * @author JTlr Frost <brradc@gmail.com> 6/16/2019
@@ -41,7 +45,11 @@ public class ClientNetworkHandler extends NetworkHandler {
                 if (ProtoEventListener.getBuilders().get(opcode) != null) {
                     ProtoEventListener.decode(packet);
                     if (ProtoEventListener.forOpcode(opcode) != null) {
-                        ProtoEventListener.getListeners().get(opcode).handleRaw(message, ctx.channel().attr(getSessionKey()).get());
+                        for (Map.Entry<ProtoListener<?>, PacketOuterClass.Opcode> entry : ProtoEventListener.getListeners().entrySet()) {
+                            if (entry.getValue() == opcode)
+                                entry.getKey().handleRaw(message, ctx.channel().attr(getSessionKey()).get());
+                        }
+                       // ProtoEventListener.getListeners().gethandleRaw(message, ctx.channel().attr(getSessionKey()).get());
                     }
                 }
             }

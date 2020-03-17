@@ -35,6 +35,9 @@ public class CentralSession extends Session {
         setConnectionUuid(connectionUuid);
     }
 
+    /**
+     * Initializes the Thread for Sending the 'Central Server' a ping to keep the connection alive.
+     */
     @Override
     public void invoke() {
 

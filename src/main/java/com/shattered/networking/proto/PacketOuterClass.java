@@ -380,169 +380,173 @@ public final class PacketOuterClass {
      */
     SMSG_CHAT_MESSAGE(262),
     /**
-     * <code>CMSG_NPC_INTERACTION = 263;</code>
+     * <code>SMSG_GAME_MESSAGE = 263;</code>
      */
-    CMSG_NPC_INTERACTION(263),
+    SMSG_GAME_MESSAGE(263),
     /**
-     * <code>CMSG_OBJECT_INTERACTION = 264;</code>
+     * <code>CMSG_NPC_INTERACTION = 264;</code>
      */
-    CMSG_OBJECT_INTERACTION(264),
+    CMSG_NPC_INTERACTION(264),
     /**
-     * <code>CMSG_CHARACTER_INTERACTION = 265;</code>
+     * <code>CMSG_OBJECT_INTERACTION = 265;</code>
      */
-    CMSG_CHARACTER_INTERACTION(265),
+    CMSG_OBJECT_INTERACTION(265),
+    /**
+     * <code>CMSG_CHARACTER_INTERACTION = 266;</code>
+     */
+    CMSG_CHARACTER_INTERACTION(266),
     /**
      * <pre>
      *Containers
      * </pre>
      *
-     * <code>CMSG_SHIFT_CONTAINER_SLOT = 266;</code>
+     * <code>CMSG_SHIFT_CONTAINER_SLOT = 267;</code>
      */
-    CMSG_SHIFT_CONTAINER_SLOT(266),
+    CMSG_SHIFT_CONTAINER_SLOT(267),
     /**
-     * <code>CMSG_SHIFT_CONTAINER_SLOT_TO_WIDGET = 267;</code>
+     * <code>CMSG_SHIFT_CONTAINER_SLOT_TO_WIDGET = 268;</code>
      */
-    CMSG_SHIFT_CONTAINER_SLOT_TO_WIDGET(267),
+    CMSG_SHIFT_CONTAINER_SLOT_TO_WIDGET(268),
     /**
-     * <code>CMSG_USE_CONTAINER_SLOT = 268;</code>
+     * <code>CMSG_USE_CONTAINER_SLOT = 269;</code>
      */
-    CMSG_USE_CONTAINER_SLOT(268),
+    CMSG_USE_CONTAINER_SLOT(269),
     /**
-     * <code>SMSG_UPDATE_ITEM_CONTAINER_FULL = 269;</code>
+     * <code>SMSG_UPDATE_ITEM_CONTAINER_FULL = 270;</code>
      */
-    SMSG_UPDATE_ITEM_CONTAINER_FULL(269),
+    SMSG_UPDATE_ITEM_CONTAINER_FULL(270),
     /**
-     * <code>SMSG_UPDATE_ITEM_CONTAINER_SLOT = 270;</code>
+     * <code>SMSG_UPDATE_ITEM_CONTAINER_SLOT = 271;</code>
      */
-    SMSG_UPDATE_ITEM_CONTAINER_SLOT(270),
+    SMSG_UPDATE_ITEM_CONTAINER_SLOT(271),
     /**
-     * <code>SMSG_UPDATE_ABILITY_CONTAINER_FULL = 271;</code>
+     * <code>SMSG_UPDATE_ABILITY_CONTAINER_FULL = 272;</code>
      */
-    SMSG_UPDATE_ABILITY_CONTAINER_FULL(271),
+    SMSG_UPDATE_ABILITY_CONTAINER_FULL(272),
     /**
-     * <code>SMSG_UPDATE_ABILITY_CONTAINER_SLOT = 272;</code>
+     * <code>SMSG_UPDATE_ABILITY_CONTAINER_SLOT = 273;</code>
      */
-    SMSG_UPDATE_ABILITY_CONTAINER_SLOT(272),
+    SMSG_UPDATE_ABILITY_CONTAINER_SLOT(273),
     /**
-     * <code>SMSG_UPDATE_MIXED_CONTAINER_FULL = 273;</code>
+     * <code>SMSG_UPDATE_MIXED_CONTAINER_FULL = 274;</code>
      */
-    SMSG_UPDATE_MIXED_CONTAINER_FULL(273),
+    SMSG_UPDATE_MIXED_CONTAINER_FULL(274),
     /**
-     * <code>SMSG_UPDATE_MIXED_CONTAINER_SLOT = 274;</code>
+     * <code>SMSG_UPDATE_MIXED_CONTAINER_SLOT = 275;</code>
      */
-    SMSG_UPDATE_MIXED_CONTAINER_SLOT(274),
+    SMSG_UPDATE_MIXED_CONTAINER_SLOT(275),
     /**
-     * <code>SMSG_UPDATE_ACTION_BAR_SLOT = 275;</code>
+     * <code>SMSG_UPDATE_ACTION_BAR_SLOT = 276;</code>
      */
-    SMSG_UPDATE_ACTION_BAR_SLOT(275),
+    SMSG_UPDATE_ACTION_BAR_SLOT(276),
     /**
-     * <code>SMSG_PLAY_SOUND_EFFECT = 276;</code>
+     * <code>SMSG_PLAY_SOUND_EFFECT = 277;</code>
      */
-    SMSG_PLAY_SOUND_EFFECT(276),
+    SMSG_PLAY_SOUND_EFFECT(277),
     /**
-     * <code>SMSG_PLAY_SOUND_TRACK = 277;</code>
+     * <code>SMSG_PLAY_SOUND_TRACK = 278;</code>
      */
-    SMSG_PLAY_SOUND_TRACK(277),
+    SMSG_PLAY_SOUND_TRACK(278),
     /**
-     * <code>SMSG_SPAWN_PROJECTILE = 278;</code>
+     * <code>SMSG_SPAWN_PROJECTILE = 279;</code>
      */
-    SMSG_SPAWN_PROJECTILE(278),
+    SMSG_SPAWN_PROJECTILE(279),
     /**
-     * <code>SMSG_SPAWN_EMITTER = 279;</code>
+     * <code>SMSG_SPAWN_EMITTER = 280;</code>
      */
-    SMSG_SPAWN_EMITTER(279),
+    SMSG_SPAWN_EMITTER(280),
     /**
-     * <code>SMSG_CHAR_VAR_INT = 280;</code>
+     * <code>SMSG_CHAR_VAR_INT = 281;</code>
      */
-    SMSG_CHAR_VAR_INT(280),
+    SMSG_CHAR_VAR_INT(281),
     /**
-     * <code>SMSG_CHAR_VAR_STRING = 281;</code>
+     * <code>SMSG_CHAR_VAR_STRING = 282;</code>
      */
-    SMSG_CHAR_VAR_STRING(281),
+    SMSG_CHAR_VAR_STRING(282),
     /**
-     * <code>SMSG_SINGLE_DIALOG = 282;</code>
+     * <code>SMSG_SINGLE_DIALOG = 283;</code>
      */
-    SMSG_SINGLE_DIALOG(282),
+    SMSG_SINGLE_DIALOG(283),
     /**
-     * <code>SMSG_MULTI_DIALOG = 283;</code>
+     * <code>SMSG_MULTI_DIALOG = 284;</code>
      */
-    SMSG_MULTI_DIALOG(283),
+    SMSG_MULTI_DIALOG(284),
     /**
-     * <code>CMSG_DIALOG_OPTION = 284;</code>
+     * <code>CMSG_DIALOG_OPTION = 285;</code>
      */
-    CMSG_DIALOG_OPTION(284),
+    CMSG_DIALOG_OPTION(285),
     /**
-     * <code>SMSG_DIALOG_EXIT = 285;</code>
+     * <code>SMSG_DIALOG_EXIT = 286;</code>
      */
-    SMSG_DIALOG_EXIT(285),
+    SMSG_DIALOG_EXIT(286),
     /**
-     * <code>SMSG_CREATE_WIDGET = 286;</code>
+     * <code>SMSG_CREATE_WIDGET = 287;</code>
      */
-    SMSG_CREATE_WIDGET(286),
+    SMSG_CREATE_WIDGET(287),
     /**
-     * <code>SMSG_DESTRUCT_WIDGET = 287;</code>
+     * <code>SMSG_DESTRUCT_WIDGET = 288;</code>
      */
-    SMSG_DESTRUCT_WIDGET(287),
+    SMSG_DESTRUCT_WIDGET(288),
     /**
-     * <code>SMSG_SET_MARKER_ON_NPC = 288;</code>
+     * <code>SMSG_SET_MARKER_ON_NPC = 289;</code>
      */
-    SMSG_SET_MARKER_ON_NPC(288),
+    SMSG_SET_MARKER_ON_NPC(289),
     /**
-     * <code>SMSG_SET_MARKER_ON_OBJECT = 289;</code>
+     * <code>SMSG_SET_MARKER_ON_OBJECT = 290;</code>
      */
-    SMSG_SET_MARKER_ON_OBJECT(289),
+    SMSG_SET_MARKER_ON_OBJECT(290),
     /**
-     * <code>SMSG_SET_MARKER_ON_CHARACTER = 290;</code>
+     * <code>SMSG_SET_MARKER_ON_CHARACTER = 291;</code>
      */
-    SMSG_SET_MARKER_ON_CHARACTER(290),
+    SMSG_SET_MARKER_ON_CHARACTER(291),
     /**
-     * <code>SMSG_UPDATE_MARKER_ON_NPC = 291;</code>
+     * <code>SMSG_UPDATE_MARKER_ON_NPC = 292;</code>
      */
-    SMSG_UPDATE_MARKER_ON_NPC(291),
+    SMSG_UPDATE_MARKER_ON_NPC(292),
     /**
-     * <code>SMSG_UPDATE_MARKER_ON_OBJECT = 292;</code>
+     * <code>SMSG_UPDATE_MARKER_ON_OBJECT = 293;</code>
      */
-    SMSG_UPDATE_MARKER_ON_OBJECT(292),
+    SMSG_UPDATE_MARKER_ON_OBJECT(293),
     /**
-     * <code>SMSG_UPDATE_MARKER_ON_CHARACTER = 293;</code>
+     * <code>SMSG_UPDATE_MARKER_ON_CHARACTER = 294;</code>
      */
-    SMSG_UPDATE_MARKER_ON_CHARACTER(293),
+    SMSG_UPDATE_MARKER_ON_CHARACTER(294),
     /**
-     * <code>SMSG_REMOVE_MARKER_ON_NPC = 294;</code>
+     * <code>SMSG_REMOVE_MARKER_ON_NPC = 295;</code>
      */
-    SMSG_REMOVE_MARKER_ON_NPC(294),
+    SMSG_REMOVE_MARKER_ON_NPC(295),
     /**
-     * <code>SMSG_REMOVE_MARKER_ON_OBJECT = 295;</code>
+     * <code>SMSG_REMOVE_MARKER_ON_OBJECT = 296;</code>
      */
-    SMSG_REMOVE_MARKER_ON_OBJECT(295),
+    SMSG_REMOVE_MARKER_ON_OBJECT(296),
     /**
-     * <code>SMSG_REMOVE_MARKER_ON_CHARACTER = 296;</code>
+     * <code>SMSG_REMOVE_MARKER_ON_CHARACTER = 297;</code>
      */
-    SMSG_REMOVE_MARKER_ON_CHARACTER(296),
+    SMSG_REMOVE_MARKER_ON_CHARACTER(297),
     /**
-     * <code>SMSG_DISPLAY_ACQUIRED = 297;</code>
+     * <code>SMSG_DISPLAY_ACQUIRED = 298;</code>
      */
-    SMSG_DISPLAY_ACQUIRED(297),
+    SMSG_DISPLAY_ACQUIRED(298),
     /**
-     * <code>SMSG_DISPLAY_GLOBAL_NOTIFICATION = 298;</code>
+     * <code>SMSG_DISPLAY_GLOBAL_NOTIFICATION = 299;</code>
      */
-    SMSG_DISPLAY_GLOBAL_NOTIFICATION(298),
+    SMSG_DISPLAY_GLOBAL_NOTIFICATION(299),
     /**
-     * <code>SMSG_DISPLAY_GUIDE_MESSAGE = 299;</code>
+     * <code>SMSG_DISPLAY_GUIDE_MESSAGE = 300;</code>
      */
-    SMSG_DISPLAY_GUIDE_MESSAGE(299),
+    SMSG_DISPLAY_GUIDE_MESSAGE(300),
     /**
-     * <code>SMSG_DISPLAY_QUEST_NOTIFICATION = 300;</code>
+     * <code>SMSG_DISPLAY_QUEST_NOTIFICATION = 301;</code>
      */
-    SMSG_DISPLAY_QUEST_NOTIFICATION(300),
+    SMSG_DISPLAY_QUEST_NOTIFICATION(301),
     /**
-     * <code>UN_SET_FIELD_4 = 301;</code>
+     * <code>UN_SET_FIELD_4 = 302;</code>
      */
-    UN_SET_FIELD_4(301),
+    UN_SET_FIELD_4(302),
     /**
-     * <code>SMSG_DISPLAY_UNLOCKED_NOTIFICATION = 302;</code>
+     * <code>SMSG_DISPLAY_UNLOCKED_NOTIFICATION = 303;</code>
      */
-    SMSG_DISPLAY_UNLOCKED_NOTIFICATION(302),
+    SMSG_DISPLAY_UNLOCKED_NOTIFICATION(303),
     /**
      * <code>Shattered_World_EO_Messages = 401;</code>
      */
@@ -911,169 +915,173 @@ public final class PacketOuterClass {
      */
     public static final int SMSG_CHAT_MESSAGE_VALUE = 262;
     /**
-     * <code>CMSG_NPC_INTERACTION = 263;</code>
+     * <code>SMSG_GAME_MESSAGE = 263;</code>
      */
-    public static final int CMSG_NPC_INTERACTION_VALUE = 263;
+    public static final int SMSG_GAME_MESSAGE_VALUE = 263;
     /**
-     * <code>CMSG_OBJECT_INTERACTION = 264;</code>
+     * <code>CMSG_NPC_INTERACTION = 264;</code>
      */
-    public static final int CMSG_OBJECT_INTERACTION_VALUE = 264;
+    public static final int CMSG_NPC_INTERACTION_VALUE = 264;
     /**
-     * <code>CMSG_CHARACTER_INTERACTION = 265;</code>
+     * <code>CMSG_OBJECT_INTERACTION = 265;</code>
      */
-    public static final int CMSG_CHARACTER_INTERACTION_VALUE = 265;
+    public static final int CMSG_OBJECT_INTERACTION_VALUE = 265;
+    /**
+     * <code>CMSG_CHARACTER_INTERACTION = 266;</code>
+     */
+    public static final int CMSG_CHARACTER_INTERACTION_VALUE = 266;
     /**
      * <pre>
      *Containers
      * </pre>
      *
-     * <code>CMSG_SHIFT_CONTAINER_SLOT = 266;</code>
+     * <code>CMSG_SHIFT_CONTAINER_SLOT = 267;</code>
      */
-    public static final int CMSG_SHIFT_CONTAINER_SLOT_VALUE = 266;
+    public static final int CMSG_SHIFT_CONTAINER_SLOT_VALUE = 267;
     /**
-     * <code>CMSG_SHIFT_CONTAINER_SLOT_TO_WIDGET = 267;</code>
+     * <code>CMSG_SHIFT_CONTAINER_SLOT_TO_WIDGET = 268;</code>
      */
-    public static final int CMSG_SHIFT_CONTAINER_SLOT_TO_WIDGET_VALUE = 267;
+    public static final int CMSG_SHIFT_CONTAINER_SLOT_TO_WIDGET_VALUE = 268;
     /**
-     * <code>CMSG_USE_CONTAINER_SLOT = 268;</code>
+     * <code>CMSG_USE_CONTAINER_SLOT = 269;</code>
      */
-    public static final int CMSG_USE_CONTAINER_SLOT_VALUE = 268;
+    public static final int CMSG_USE_CONTAINER_SLOT_VALUE = 269;
     /**
-     * <code>SMSG_UPDATE_ITEM_CONTAINER_FULL = 269;</code>
+     * <code>SMSG_UPDATE_ITEM_CONTAINER_FULL = 270;</code>
      */
-    public static final int SMSG_UPDATE_ITEM_CONTAINER_FULL_VALUE = 269;
+    public static final int SMSG_UPDATE_ITEM_CONTAINER_FULL_VALUE = 270;
     /**
-     * <code>SMSG_UPDATE_ITEM_CONTAINER_SLOT = 270;</code>
+     * <code>SMSG_UPDATE_ITEM_CONTAINER_SLOT = 271;</code>
      */
-    public static final int SMSG_UPDATE_ITEM_CONTAINER_SLOT_VALUE = 270;
+    public static final int SMSG_UPDATE_ITEM_CONTAINER_SLOT_VALUE = 271;
     /**
-     * <code>SMSG_UPDATE_ABILITY_CONTAINER_FULL = 271;</code>
+     * <code>SMSG_UPDATE_ABILITY_CONTAINER_FULL = 272;</code>
      */
-    public static final int SMSG_UPDATE_ABILITY_CONTAINER_FULL_VALUE = 271;
+    public static final int SMSG_UPDATE_ABILITY_CONTAINER_FULL_VALUE = 272;
     /**
-     * <code>SMSG_UPDATE_ABILITY_CONTAINER_SLOT = 272;</code>
+     * <code>SMSG_UPDATE_ABILITY_CONTAINER_SLOT = 273;</code>
      */
-    public static final int SMSG_UPDATE_ABILITY_CONTAINER_SLOT_VALUE = 272;
+    public static final int SMSG_UPDATE_ABILITY_CONTAINER_SLOT_VALUE = 273;
     /**
-     * <code>SMSG_UPDATE_MIXED_CONTAINER_FULL = 273;</code>
+     * <code>SMSG_UPDATE_MIXED_CONTAINER_FULL = 274;</code>
      */
-    public static final int SMSG_UPDATE_MIXED_CONTAINER_FULL_VALUE = 273;
+    public static final int SMSG_UPDATE_MIXED_CONTAINER_FULL_VALUE = 274;
     /**
-     * <code>SMSG_UPDATE_MIXED_CONTAINER_SLOT = 274;</code>
+     * <code>SMSG_UPDATE_MIXED_CONTAINER_SLOT = 275;</code>
      */
-    public static final int SMSG_UPDATE_MIXED_CONTAINER_SLOT_VALUE = 274;
+    public static final int SMSG_UPDATE_MIXED_CONTAINER_SLOT_VALUE = 275;
     /**
-     * <code>SMSG_UPDATE_ACTION_BAR_SLOT = 275;</code>
+     * <code>SMSG_UPDATE_ACTION_BAR_SLOT = 276;</code>
      */
-    public static final int SMSG_UPDATE_ACTION_BAR_SLOT_VALUE = 275;
+    public static final int SMSG_UPDATE_ACTION_BAR_SLOT_VALUE = 276;
     /**
-     * <code>SMSG_PLAY_SOUND_EFFECT = 276;</code>
+     * <code>SMSG_PLAY_SOUND_EFFECT = 277;</code>
      */
-    public static final int SMSG_PLAY_SOUND_EFFECT_VALUE = 276;
+    public static final int SMSG_PLAY_SOUND_EFFECT_VALUE = 277;
     /**
-     * <code>SMSG_PLAY_SOUND_TRACK = 277;</code>
+     * <code>SMSG_PLAY_SOUND_TRACK = 278;</code>
      */
-    public static final int SMSG_PLAY_SOUND_TRACK_VALUE = 277;
+    public static final int SMSG_PLAY_SOUND_TRACK_VALUE = 278;
     /**
-     * <code>SMSG_SPAWN_PROJECTILE = 278;</code>
+     * <code>SMSG_SPAWN_PROJECTILE = 279;</code>
      */
-    public static final int SMSG_SPAWN_PROJECTILE_VALUE = 278;
+    public static final int SMSG_SPAWN_PROJECTILE_VALUE = 279;
     /**
-     * <code>SMSG_SPAWN_EMITTER = 279;</code>
+     * <code>SMSG_SPAWN_EMITTER = 280;</code>
      */
-    public static final int SMSG_SPAWN_EMITTER_VALUE = 279;
+    public static final int SMSG_SPAWN_EMITTER_VALUE = 280;
     /**
-     * <code>SMSG_CHAR_VAR_INT = 280;</code>
+     * <code>SMSG_CHAR_VAR_INT = 281;</code>
      */
-    public static final int SMSG_CHAR_VAR_INT_VALUE = 280;
+    public static final int SMSG_CHAR_VAR_INT_VALUE = 281;
     /**
-     * <code>SMSG_CHAR_VAR_STRING = 281;</code>
+     * <code>SMSG_CHAR_VAR_STRING = 282;</code>
      */
-    public static final int SMSG_CHAR_VAR_STRING_VALUE = 281;
+    public static final int SMSG_CHAR_VAR_STRING_VALUE = 282;
     /**
-     * <code>SMSG_SINGLE_DIALOG = 282;</code>
+     * <code>SMSG_SINGLE_DIALOG = 283;</code>
      */
-    public static final int SMSG_SINGLE_DIALOG_VALUE = 282;
+    public static final int SMSG_SINGLE_DIALOG_VALUE = 283;
     /**
-     * <code>SMSG_MULTI_DIALOG = 283;</code>
+     * <code>SMSG_MULTI_DIALOG = 284;</code>
      */
-    public static final int SMSG_MULTI_DIALOG_VALUE = 283;
+    public static final int SMSG_MULTI_DIALOG_VALUE = 284;
     /**
-     * <code>CMSG_DIALOG_OPTION = 284;</code>
+     * <code>CMSG_DIALOG_OPTION = 285;</code>
      */
-    public static final int CMSG_DIALOG_OPTION_VALUE = 284;
+    public static final int CMSG_DIALOG_OPTION_VALUE = 285;
     /**
-     * <code>SMSG_DIALOG_EXIT = 285;</code>
+     * <code>SMSG_DIALOG_EXIT = 286;</code>
      */
-    public static final int SMSG_DIALOG_EXIT_VALUE = 285;
+    public static final int SMSG_DIALOG_EXIT_VALUE = 286;
     /**
-     * <code>SMSG_CREATE_WIDGET = 286;</code>
+     * <code>SMSG_CREATE_WIDGET = 287;</code>
      */
-    public static final int SMSG_CREATE_WIDGET_VALUE = 286;
+    public static final int SMSG_CREATE_WIDGET_VALUE = 287;
     /**
-     * <code>SMSG_DESTRUCT_WIDGET = 287;</code>
+     * <code>SMSG_DESTRUCT_WIDGET = 288;</code>
      */
-    public static final int SMSG_DESTRUCT_WIDGET_VALUE = 287;
+    public static final int SMSG_DESTRUCT_WIDGET_VALUE = 288;
     /**
-     * <code>SMSG_SET_MARKER_ON_NPC = 288;</code>
+     * <code>SMSG_SET_MARKER_ON_NPC = 289;</code>
      */
-    public static final int SMSG_SET_MARKER_ON_NPC_VALUE = 288;
+    public static final int SMSG_SET_MARKER_ON_NPC_VALUE = 289;
     /**
-     * <code>SMSG_SET_MARKER_ON_OBJECT = 289;</code>
+     * <code>SMSG_SET_MARKER_ON_OBJECT = 290;</code>
      */
-    public static final int SMSG_SET_MARKER_ON_OBJECT_VALUE = 289;
+    public static final int SMSG_SET_MARKER_ON_OBJECT_VALUE = 290;
     /**
-     * <code>SMSG_SET_MARKER_ON_CHARACTER = 290;</code>
+     * <code>SMSG_SET_MARKER_ON_CHARACTER = 291;</code>
      */
-    public static final int SMSG_SET_MARKER_ON_CHARACTER_VALUE = 290;
+    public static final int SMSG_SET_MARKER_ON_CHARACTER_VALUE = 291;
     /**
-     * <code>SMSG_UPDATE_MARKER_ON_NPC = 291;</code>
+     * <code>SMSG_UPDATE_MARKER_ON_NPC = 292;</code>
      */
-    public static final int SMSG_UPDATE_MARKER_ON_NPC_VALUE = 291;
+    public static final int SMSG_UPDATE_MARKER_ON_NPC_VALUE = 292;
     /**
-     * <code>SMSG_UPDATE_MARKER_ON_OBJECT = 292;</code>
+     * <code>SMSG_UPDATE_MARKER_ON_OBJECT = 293;</code>
      */
-    public static final int SMSG_UPDATE_MARKER_ON_OBJECT_VALUE = 292;
+    public static final int SMSG_UPDATE_MARKER_ON_OBJECT_VALUE = 293;
     /**
-     * <code>SMSG_UPDATE_MARKER_ON_CHARACTER = 293;</code>
+     * <code>SMSG_UPDATE_MARKER_ON_CHARACTER = 294;</code>
      */
-    public static final int SMSG_UPDATE_MARKER_ON_CHARACTER_VALUE = 293;
+    public static final int SMSG_UPDATE_MARKER_ON_CHARACTER_VALUE = 294;
     /**
-     * <code>SMSG_REMOVE_MARKER_ON_NPC = 294;</code>
+     * <code>SMSG_REMOVE_MARKER_ON_NPC = 295;</code>
      */
-    public static final int SMSG_REMOVE_MARKER_ON_NPC_VALUE = 294;
+    public static final int SMSG_REMOVE_MARKER_ON_NPC_VALUE = 295;
     /**
-     * <code>SMSG_REMOVE_MARKER_ON_OBJECT = 295;</code>
+     * <code>SMSG_REMOVE_MARKER_ON_OBJECT = 296;</code>
      */
-    public static final int SMSG_REMOVE_MARKER_ON_OBJECT_VALUE = 295;
+    public static final int SMSG_REMOVE_MARKER_ON_OBJECT_VALUE = 296;
     /**
-     * <code>SMSG_REMOVE_MARKER_ON_CHARACTER = 296;</code>
+     * <code>SMSG_REMOVE_MARKER_ON_CHARACTER = 297;</code>
      */
-    public static final int SMSG_REMOVE_MARKER_ON_CHARACTER_VALUE = 296;
+    public static final int SMSG_REMOVE_MARKER_ON_CHARACTER_VALUE = 297;
     /**
-     * <code>SMSG_DISPLAY_ACQUIRED = 297;</code>
+     * <code>SMSG_DISPLAY_ACQUIRED = 298;</code>
      */
-    public static final int SMSG_DISPLAY_ACQUIRED_VALUE = 297;
+    public static final int SMSG_DISPLAY_ACQUIRED_VALUE = 298;
     /**
-     * <code>SMSG_DISPLAY_GLOBAL_NOTIFICATION = 298;</code>
+     * <code>SMSG_DISPLAY_GLOBAL_NOTIFICATION = 299;</code>
      */
-    public static final int SMSG_DISPLAY_GLOBAL_NOTIFICATION_VALUE = 298;
+    public static final int SMSG_DISPLAY_GLOBAL_NOTIFICATION_VALUE = 299;
     /**
-     * <code>SMSG_DISPLAY_GUIDE_MESSAGE = 299;</code>
+     * <code>SMSG_DISPLAY_GUIDE_MESSAGE = 300;</code>
      */
-    public static final int SMSG_DISPLAY_GUIDE_MESSAGE_VALUE = 299;
+    public static final int SMSG_DISPLAY_GUIDE_MESSAGE_VALUE = 300;
     /**
-     * <code>SMSG_DISPLAY_QUEST_NOTIFICATION = 300;</code>
+     * <code>SMSG_DISPLAY_QUEST_NOTIFICATION = 301;</code>
      */
-    public static final int SMSG_DISPLAY_QUEST_NOTIFICATION_VALUE = 300;
+    public static final int SMSG_DISPLAY_QUEST_NOTIFICATION_VALUE = 301;
     /**
-     * <code>UN_SET_FIELD_4 = 301;</code>
+     * <code>UN_SET_FIELD_4 = 302;</code>
      */
-    public static final int UN_SET_FIELD_4_VALUE = 301;
+    public static final int UN_SET_FIELD_4_VALUE = 302;
     /**
-     * <code>SMSG_DISPLAY_UNLOCKED_NOTIFICATION = 302;</code>
+     * <code>SMSG_DISPLAY_UNLOCKED_NOTIFICATION = 303;</code>
      */
-    public static final int SMSG_DISPLAY_UNLOCKED_NOTIFICATION_VALUE = 302;
+    public static final int SMSG_DISPLAY_UNLOCKED_NOTIFICATION_VALUE = 303;
     /**
      * <code>Shattered_World_EO_Messages = 401;</code>
      */
@@ -1180,46 +1188,47 @@ public final class PacketOuterClass {
         case 260: return SMSG_TRANSFER_WORLDS;
         case 261: return CMSG_CHAT_MESSAGE;
         case 262: return SMSG_CHAT_MESSAGE;
-        case 263: return CMSG_NPC_INTERACTION;
-        case 264: return CMSG_OBJECT_INTERACTION;
-        case 265: return CMSG_CHARACTER_INTERACTION;
-        case 266: return CMSG_SHIFT_CONTAINER_SLOT;
-        case 267: return CMSG_SHIFT_CONTAINER_SLOT_TO_WIDGET;
-        case 268: return CMSG_USE_CONTAINER_SLOT;
-        case 269: return SMSG_UPDATE_ITEM_CONTAINER_FULL;
-        case 270: return SMSG_UPDATE_ITEM_CONTAINER_SLOT;
-        case 271: return SMSG_UPDATE_ABILITY_CONTAINER_FULL;
-        case 272: return SMSG_UPDATE_ABILITY_CONTAINER_SLOT;
-        case 273: return SMSG_UPDATE_MIXED_CONTAINER_FULL;
-        case 274: return SMSG_UPDATE_MIXED_CONTAINER_SLOT;
-        case 275: return SMSG_UPDATE_ACTION_BAR_SLOT;
-        case 276: return SMSG_PLAY_SOUND_EFFECT;
-        case 277: return SMSG_PLAY_SOUND_TRACK;
-        case 278: return SMSG_SPAWN_PROJECTILE;
-        case 279: return SMSG_SPAWN_EMITTER;
-        case 280: return SMSG_CHAR_VAR_INT;
-        case 281: return SMSG_CHAR_VAR_STRING;
-        case 282: return SMSG_SINGLE_DIALOG;
-        case 283: return SMSG_MULTI_DIALOG;
-        case 284: return CMSG_DIALOG_OPTION;
-        case 285: return SMSG_DIALOG_EXIT;
-        case 286: return SMSG_CREATE_WIDGET;
-        case 287: return SMSG_DESTRUCT_WIDGET;
-        case 288: return SMSG_SET_MARKER_ON_NPC;
-        case 289: return SMSG_SET_MARKER_ON_OBJECT;
-        case 290: return SMSG_SET_MARKER_ON_CHARACTER;
-        case 291: return SMSG_UPDATE_MARKER_ON_NPC;
-        case 292: return SMSG_UPDATE_MARKER_ON_OBJECT;
-        case 293: return SMSG_UPDATE_MARKER_ON_CHARACTER;
-        case 294: return SMSG_REMOVE_MARKER_ON_NPC;
-        case 295: return SMSG_REMOVE_MARKER_ON_OBJECT;
-        case 296: return SMSG_REMOVE_MARKER_ON_CHARACTER;
-        case 297: return SMSG_DISPLAY_ACQUIRED;
-        case 298: return SMSG_DISPLAY_GLOBAL_NOTIFICATION;
-        case 299: return SMSG_DISPLAY_GUIDE_MESSAGE;
-        case 300: return SMSG_DISPLAY_QUEST_NOTIFICATION;
-        case 301: return UN_SET_FIELD_4;
-        case 302: return SMSG_DISPLAY_UNLOCKED_NOTIFICATION;
+        case 263: return SMSG_GAME_MESSAGE;
+        case 264: return CMSG_NPC_INTERACTION;
+        case 265: return CMSG_OBJECT_INTERACTION;
+        case 266: return CMSG_CHARACTER_INTERACTION;
+        case 267: return CMSG_SHIFT_CONTAINER_SLOT;
+        case 268: return CMSG_SHIFT_CONTAINER_SLOT_TO_WIDGET;
+        case 269: return CMSG_USE_CONTAINER_SLOT;
+        case 270: return SMSG_UPDATE_ITEM_CONTAINER_FULL;
+        case 271: return SMSG_UPDATE_ITEM_CONTAINER_SLOT;
+        case 272: return SMSG_UPDATE_ABILITY_CONTAINER_FULL;
+        case 273: return SMSG_UPDATE_ABILITY_CONTAINER_SLOT;
+        case 274: return SMSG_UPDATE_MIXED_CONTAINER_FULL;
+        case 275: return SMSG_UPDATE_MIXED_CONTAINER_SLOT;
+        case 276: return SMSG_UPDATE_ACTION_BAR_SLOT;
+        case 277: return SMSG_PLAY_SOUND_EFFECT;
+        case 278: return SMSG_PLAY_SOUND_TRACK;
+        case 279: return SMSG_SPAWN_PROJECTILE;
+        case 280: return SMSG_SPAWN_EMITTER;
+        case 281: return SMSG_CHAR_VAR_INT;
+        case 282: return SMSG_CHAR_VAR_STRING;
+        case 283: return SMSG_SINGLE_DIALOG;
+        case 284: return SMSG_MULTI_DIALOG;
+        case 285: return CMSG_DIALOG_OPTION;
+        case 286: return SMSG_DIALOG_EXIT;
+        case 287: return SMSG_CREATE_WIDGET;
+        case 288: return SMSG_DESTRUCT_WIDGET;
+        case 289: return SMSG_SET_MARKER_ON_NPC;
+        case 290: return SMSG_SET_MARKER_ON_OBJECT;
+        case 291: return SMSG_SET_MARKER_ON_CHARACTER;
+        case 292: return SMSG_UPDATE_MARKER_ON_NPC;
+        case 293: return SMSG_UPDATE_MARKER_ON_OBJECT;
+        case 294: return SMSG_UPDATE_MARKER_ON_CHARACTER;
+        case 295: return SMSG_REMOVE_MARKER_ON_NPC;
+        case 296: return SMSG_REMOVE_MARKER_ON_OBJECT;
+        case 297: return SMSG_REMOVE_MARKER_ON_CHARACTER;
+        case 298: return SMSG_DISPLAY_ACQUIRED;
+        case 299: return SMSG_DISPLAY_GLOBAL_NOTIFICATION;
+        case 300: return SMSG_DISPLAY_GUIDE_MESSAGE;
+        case 301: return SMSG_DISPLAY_QUEST_NOTIFICATION;
+        case 302: return UN_SET_FIELD_4;
+        case 303: return SMSG_DISPLAY_UNLOCKED_NOTIFICATION;
         case 401: return Shattered_World_EO_Messages;
         default: return null;
       }
@@ -2835,7 +2844,7 @@ public final class PacketOuterClass {
       "\n\014packet.proto\022\022shattered.protocol\"E\n\006Pa" +
       "cket\022*\n\006opcode\030\001 \001(\0162\032.shattered.protoco" +
       "l.Opcode\022\017\n\007payload\030\002 \001(\014\"\016\n\014EmptyPayloa" +
-      "d\" \n\rStringPayload\022\017\n\007payload\030\001 \001(\t*\353\032\n\006" +
+      "d\" \n\rStringPayload\022\017\n\007payload\030\001 \001(\t*\203\033\n\006" +
       "Opcode\022\022\n\016INVALID_OPCODE\020\000\022\016\n\nU_Messages" +
       "\020\001\022\n\n\006U_Ping\020\002\022\027\n\023U_ServerPerformance\020\003\022" +
       "\021\n\rU_EO_Messages\020\033\022\022\n\016Proxy_Messages\020\034\022\024" +
@@ -2887,42 +2896,43 @@ public final class PacketOuterClass {
       "ACTER_SYNCHRONIZE\020\201\002\022\031\n\024SMSG_NPC_SYNCHRO" +
       "NIZE\020\202\002\022\034\n\027SMSG_OBJECT_SYNCHRONIZE\020\203\002\022\031\n" +
       "\024SMSG_TRANSFER_WORLDS\020\204\002\022\026\n\021CMSG_CHAT_ME" +
-      "SSAGE\020\205\002\022\026\n\021SMSG_CHAT_MESSAGE\020\206\002\022\031\n\024CMSG" +
-      "_NPC_INTERACTION\020\207\002\022\034\n\027CMSG_OBJECT_INTER" +
-      "ACTION\020\210\002\022\037\n\032CMSG_CHARACTER_INTERACTION\020" +
-      "\211\002\022\036\n\031CMSG_SHIFT_CONTAINER_SLOT\020\212\002\022(\n#CM" +
-      "SG_SHIFT_CONTAINER_SLOT_TO_WIDGET\020\213\002\022\034\n\027" +
-      "CMSG_USE_CONTAINER_SLOT\020\214\002\022$\n\037SMSG_UPDAT" +
-      "E_ITEM_CONTAINER_FULL\020\215\002\022$\n\037SMSG_UPDATE_" +
-      "ITEM_CONTAINER_SLOT\020\216\002\022\'\n\"SMSG_UPDATE_AB" +
-      "ILITY_CONTAINER_FULL\020\217\002\022\'\n\"SMSG_UPDATE_A" +
-      "BILITY_CONTAINER_SLOT\020\220\002\022%\n SMSG_UPDATE_" +
-      "MIXED_CONTAINER_FULL\020\221\002\022%\n SMSG_UPDATE_M" +
-      "IXED_CONTAINER_SLOT\020\222\002\022 \n\033SMSG_UPDATE_AC" +
-      "TION_BAR_SLOT\020\223\002\022\033\n\026SMSG_PLAY_SOUND_EFFE" +
-      "CT\020\224\002\022\032\n\025SMSG_PLAY_SOUND_TRACK\020\225\002\022\032\n\025SMS" +
-      "G_SPAWN_PROJECTILE\020\226\002\022\027\n\022SMSG_SPAWN_EMIT" +
-      "TER\020\227\002\022\026\n\021SMSG_CHAR_VAR_INT\020\230\002\022\031\n\024SMSG_C" +
-      "HAR_VAR_STRING\020\231\002\022\027\n\022SMSG_SINGLE_DIALOG\020" +
-      "\232\002\022\026\n\021SMSG_MULTI_DIALOG\020\233\002\022\027\n\022CMSG_DIALO" +
-      "G_OPTION\020\234\002\022\025\n\020SMSG_DIALOG_EXIT\020\235\002\022\027\n\022SM" +
-      "SG_CREATE_WIDGET\020\236\002\022\031\n\024SMSG_DESTRUCT_WID" +
-      "GET\020\237\002\022\033\n\026SMSG_SET_MARKER_ON_NPC\020\240\002\022\036\n\031S" +
-      "MSG_SET_MARKER_ON_OBJECT\020\241\002\022!\n\034SMSG_SET_" +
-      "MARKER_ON_CHARACTER\020\242\002\022\036\n\031SMSG_UPDATE_MA" +
-      "RKER_ON_NPC\020\243\002\022!\n\034SMSG_UPDATE_MARKER_ON_" +
-      "OBJECT\020\244\002\022$\n\037SMSG_UPDATE_MARKER_ON_CHARA" +
-      "CTER\020\245\002\022\036\n\031SMSG_REMOVE_MARKER_ON_NPC\020\246\002\022" +
-      "!\n\034SMSG_REMOVE_MARKER_ON_OBJECT\020\247\002\022$\n\037SM" +
-      "SG_REMOVE_MARKER_ON_CHARACTER\020\250\002\022\032\n\025SMSG" +
-      "_DISPLAY_ACQUIRED\020\251\002\022%\n SMSG_DISPLAY_GLO" +
-      "BAL_NOTIFICATION\020\252\002\022\037\n\032SMSG_DISPLAY_GUID" +
-      "E_MESSAGE\020\253\002\022$\n\037SMSG_DISPLAY_QUEST_NOTIF" +
-      "ICATION\020\254\002\022\023\n\016UN_SET_FIELD_4\020\255\002\022\'\n\"SMSG_" +
-      "DISPLAY_UNLOCKED_NOTIFICATION\020\256\002\022 \n\033Shat" +
-      "tered_World_EO_Messages\020\221\003\"\004\010\004\020\032\"\004\010)\0202\"\004" +
-      "\010=\020K\"\004\010W\020d\"\005\010x\020\226\001\"\006\010\243\001\020\372\001\"\006\010\257\002\020\220\003B#\n\036com" +
-      ".shattered.networking.proto\370\001\001b\006proto3"
+      "SSAGE\020\205\002\022\026\n\021SMSG_CHAT_MESSAGE\020\206\002\022\026\n\021SMSG" +
+      "_GAME_MESSAGE\020\207\002\022\031\n\024CMSG_NPC_INTERACTION" +
+      "\020\210\002\022\034\n\027CMSG_OBJECT_INTERACTION\020\211\002\022\037\n\032CMS" +
+      "G_CHARACTER_INTERACTION\020\212\002\022\036\n\031CMSG_SHIFT" +
+      "_CONTAINER_SLOT\020\213\002\022(\n#CMSG_SHIFT_CONTAIN" +
+      "ER_SLOT_TO_WIDGET\020\214\002\022\034\n\027CMSG_USE_CONTAIN" +
+      "ER_SLOT\020\215\002\022$\n\037SMSG_UPDATE_ITEM_CONTAINER" +
+      "_FULL\020\216\002\022$\n\037SMSG_UPDATE_ITEM_CONTAINER_S" +
+      "LOT\020\217\002\022\'\n\"SMSG_UPDATE_ABILITY_CONTAINER_" +
+      "FULL\020\220\002\022\'\n\"SMSG_UPDATE_ABILITY_CONTAINER" +
+      "_SLOT\020\221\002\022%\n SMSG_UPDATE_MIXED_CONTAINER_" +
+      "FULL\020\222\002\022%\n SMSG_UPDATE_MIXED_CONTAINER_S" +
+      "LOT\020\223\002\022 \n\033SMSG_UPDATE_ACTION_BAR_SLOT\020\224\002" +
+      "\022\033\n\026SMSG_PLAY_SOUND_EFFECT\020\225\002\022\032\n\025SMSG_PL" +
+      "AY_SOUND_TRACK\020\226\002\022\032\n\025SMSG_SPAWN_PROJECTI" +
+      "LE\020\227\002\022\027\n\022SMSG_SPAWN_EMITTER\020\230\002\022\026\n\021SMSG_C" +
+      "HAR_VAR_INT\020\231\002\022\031\n\024SMSG_CHAR_VAR_STRING\020\232" +
+      "\002\022\027\n\022SMSG_SINGLE_DIALOG\020\233\002\022\026\n\021SMSG_MULTI" +
+      "_DIALOG\020\234\002\022\027\n\022CMSG_DIALOG_OPTION\020\235\002\022\025\n\020S" +
+      "MSG_DIALOG_EXIT\020\236\002\022\027\n\022SMSG_CREATE_WIDGET" +
+      "\020\237\002\022\031\n\024SMSG_DESTRUCT_WIDGET\020\240\002\022\033\n\026SMSG_S" +
+      "ET_MARKER_ON_NPC\020\241\002\022\036\n\031SMSG_SET_MARKER_O" +
+      "N_OBJECT\020\242\002\022!\n\034SMSG_SET_MARKER_ON_CHARAC" +
+      "TER\020\243\002\022\036\n\031SMSG_UPDATE_MARKER_ON_NPC\020\244\002\022!" +
+      "\n\034SMSG_UPDATE_MARKER_ON_OBJECT\020\245\002\022$\n\037SMS" +
+      "G_UPDATE_MARKER_ON_CHARACTER\020\246\002\022\036\n\031SMSG_" +
+      "REMOVE_MARKER_ON_NPC\020\247\002\022!\n\034SMSG_REMOVE_M" +
+      "ARKER_ON_OBJECT\020\250\002\022$\n\037SMSG_REMOVE_MARKER" +
+      "_ON_CHARACTER\020\251\002\022\032\n\025SMSG_DISPLAY_ACQUIRE" +
+      "D\020\252\002\022%\n SMSG_DISPLAY_GLOBAL_NOTIFICATION" +
+      "\020\253\002\022\037\n\032SMSG_DISPLAY_GUIDE_MESSAGE\020\254\002\022$\n\037" +
+      "SMSG_DISPLAY_QUEST_NOTIFICATION\020\255\002\022\023\n\016UN" +
+      "_SET_FIELD_4\020\256\002\022\'\n\"SMSG_DISPLAY_UNLOCKED" +
+      "_NOTIFICATION\020\257\002\022 \n\033Shattered_World_EO_M" +
+      "essages\020\221\003\"\004\010\004\020\032\"\004\010)\0202\"\004\010=\020K\"\004\010W\020d\"\005\010x\020\226" +
+      "\001\"\006\010\243\001\020\372\001\"\006\010\260\002\020\220\003B#\n\036com.shattered.netwo" +
+      "rking.proto\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

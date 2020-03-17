@@ -18,7 +18,7 @@ public class ProtoEventListener {
      * Represents a List of Decoders
      */
     @Getter
-    private static Map<PacketOuterClass.Opcode, ProtoListener<?>> listeners = new HashMap<>();
+    private static Map<ProtoListener<?>, PacketOuterClass.Opcode> listeners = new HashMap<>();
 
     /**
      * Represents a List of Builders
@@ -33,7 +33,7 @@ public class ProtoEventListener {
     public static <T extends GeneratedMessageV3> void registerListener(PacketOuterClass.Opcode opcode, ProtoListener<?> listener, T instance) {
         //Registers he Listener
         if (!listeners.containsKey(opcode))
-            listeners.put(opcode, listener);
+            listeners.put(listener, opcode);
 
         //Registers the Builder
         if (!builders.containsKey(opcode))
@@ -46,9 +46,9 @@ public class ProtoEventListener {
      * @return
      */
     public static ProtoListener forOpcode(PacketOuterClass.Opcode opcode) {
-        for (Map.Entry<PacketOuterClass.Opcode, ProtoListener<?>> op : listeners.entrySet()) {
+        for (Map.Entry<ProtoListener<?>, PacketOuterClass.Opcode> op : listeners.entrySet()) {
             if (op == null) continue;
-            if (opcode == op.getKey()) return op.getValue();
+            if (opcode == op.getValue()) return op.getKey();
         }
         return null;
     }
@@ -67,7 +67,6 @@ public class ProtoEventListener {
      * Decodes and merges the Payload to the {@link Message}.
      * @param packet
      * @return
-     * @throws InvalidProtocolBufferException
      */
     public static Message decode(PacketOuterClass.Packet packet) throws Exception {
         return builders.get(packet.getOpcode()).newBuilderForType().mergeFrom(packet.getPayload()).build();
