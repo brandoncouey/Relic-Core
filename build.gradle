@@ -3,18 +3,22 @@ plugins {
 }
 
 group 'relic-core'
-version '0.0.6'
+version '0.0.7'
 
 sourceCompatibility = 1.8
 
     repositories {
         mavenLocal()
         mavenCentral()
+
+        flatDir {
+            dirs 'libs'
+        }
     }
 
 
 dependencies {
-    compile fileTree(dir: 'libs', include: '*.jar')
+    compile files(fileTree(dir: 'libs', includes: ['*.jar']))
 
     compile 'org.mongodb:mongo-java-driver:3.7.1'
     compileOnly 'org.projectlombok:lombok:1.18.8'
@@ -31,6 +35,6 @@ task packageCore(type: Jar) {
                 'Implementation-Version': version
     }
     baseName = project.name + '-all'
-    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    from configurations.runtime.collect { zipTree(it) }
     with jar
 }

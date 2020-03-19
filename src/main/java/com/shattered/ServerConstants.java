@@ -49,5 +49,5 @@ public class ServerConstants {
     /**
      * Represents the AWS Central Host
      */
-    public static final String CENTRAL_HOST = LIVE ? "45.63.68.47" : "0.0.0.0";
+    public static String CENTRAL_HOST = LIVE ? "45.63.68.47" : "0.0.0.0";
 }
