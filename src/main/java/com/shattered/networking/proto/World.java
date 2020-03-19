@@ -1324,17 +1324,22 @@ public final class World {
     com.shattered.networking.proto.World.VelocityOrBuilder getVelocityOrBuilder();
 
     /**
-     * <code>float lookRoll = 3;</code>
+     * <code>float speed = 3;</code>
+     */
+    float getSpeed();
+
+    /**
+     * <code>float lookRoll = 4;</code>
      */
     float getLookRoll();
 
     /**
-     * <code>float lookYaw = 4;</code>
+     * <code>float lookYaw = 5;</code>
      */
     float getLookYaw();
 
     /**
-     * <code>bool inAir = 5;</code>
+     * <code>bool inAir = 6;</code>
      */
     boolean getInAir();
   }
@@ -1351,6 +1356,7 @@ public final class World {
       super(builder);
     }
     private CharacterTransformUpdate() {
+      speed_ = 0F;
       lookRoll_ = 0F;
       lookYaw_ = 0F;
       inAir_ = false;
@@ -1408,15 +1414,20 @@ public final class World {
             }
             case 29: {
 
-              lookRoll_ = input.readFloat();
+              speed_ = input.readFloat();
               break;
             }
             case 37: {
 
+              lookRoll_ = input.readFloat();
+              break;
+            }
+            case 45: {
+
               lookYaw_ = input.readFloat();
               break;
             }
-            case 40: {
+            case 48: {
 
               inAir_ = input.readBool();
               break;
@@ -1495,28 +1506,37 @@ public final class World {
       return getVelocity();
     }
 
-    public static final int LOOKROLL_FIELD_NUMBER = 3;
+    public static final int SPEED_FIELD_NUMBER = 3;
+    private float speed_;
+    /**
+     * <code>float speed = 3;</code>
+     */
+    public float getSpeed() {
+      return speed_;
+    }
+
+    public static final int LOOKROLL_FIELD_NUMBER = 4;
     private float lookRoll_;
     /**
-     * <code>float lookRoll = 3;</code>
+     * <code>float lookRoll = 4;</code>
      */
     public float getLookRoll() {
       return lookRoll_;
     }
 
-    public static final int LOOKYAW_FIELD_NUMBER = 4;
+    public static final int LOOKYAW_FIELD_NUMBER = 5;
     private float lookYaw_;
     /**
-     * <code>float lookYaw = 4;</code>
+     * <code>float lookYaw = 5;</code>
      */
     public float getLookYaw() {
       return lookYaw_;
     }
 
-    public static final int INAIR_FIELD_NUMBER = 5;
+    public static final int INAIR_FIELD_NUMBER = 6;
     private boolean inAir_;
     /**
-     * <code>bool inAir = 5;</code>
+     * <code>bool inAir = 6;</code>
      */
     public boolean getInAir() {
       return inAir_;
@@ -1542,14 +1562,17 @@ public final class World {
       if (velocity_ != null) {
         output.writeMessage(2, getVelocity());
       }
+      if (speed_ != 0F) {
+        output.writeFloat(3, speed_);
+      }
       if (lookRoll_ != 0F) {
-        output.writeFloat(3, lookRoll_);
+        output.writeFloat(4, lookRoll_);
       }
       if (lookYaw_ != 0F) {
-        output.writeFloat(4, lookYaw_);
+        output.writeFloat(5, lookYaw_);
       }
       if (inAir_ != false) {
-        output.writeBool(5, inAir_);
+        output.writeBool(6, inAir_);
       }
       unknownFields.writeTo(output);
     }
@@ -1568,17 +1591,21 @@ public final class World {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getVelocity());
       }
+      if (speed_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(3, speed_);
+      }
       if (lookRoll_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(3, lookRoll_);
+          .computeFloatSize(4, lookRoll_);
       }
       if (lookYaw_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(4, lookYaw_);
+          .computeFloatSize(5, lookYaw_);
       }
       if (inAir_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, inAir_);
+          .computeBoolSize(6, inAir_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1606,6 +1633,10 @@ public final class World {
         result = result && getVelocity()
             .equals(other.getVelocity());
       }
+      result = result && (
+          java.lang.Float.floatToIntBits(getSpeed())
+          == java.lang.Float.floatToIntBits(
+              other.getSpeed()));
       result = result && (
           java.lang.Float.floatToIntBits(getLookRoll())
           == java.lang.Float.floatToIntBits(
@@ -1635,6 +1666,9 @@ public final class World {
         hash = (37 * hash) + VELOCITY_FIELD_NUMBER;
         hash = (53 * hash) + getVelocity().hashCode();
       }
+      hash = (37 * hash) + SPEED_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getSpeed());
       hash = (37 * hash) + LOOKROLL_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getLookRoll());
@@ -1789,6 +1823,8 @@ public final class World {
           velocity_ = null;
           velocityBuilder_ = null;
         }
+        speed_ = 0F;
+
         lookRoll_ = 0F;
 
         lookYaw_ = 0F;
@@ -1831,6 +1867,7 @@ public final class World {
         } else {
           result.velocity_ = velocityBuilder_.build();
         }
+        result.speed_ = speed_;
         result.lookRoll_ = lookRoll_;
         result.lookYaw_ = lookYaw_;
         result.inAir_ = inAir_;
@@ -1887,6 +1924,9 @@ public final class World {
         }
         if (other.hasVelocity()) {
           mergeVelocity(other.getVelocity());
+        }
+        if (other.getSpeed() != 0F) {
+          setSpeed(other.getSpeed());
         }
         if (other.getLookRoll() != 0F) {
           setLookRoll(other.getLookRoll());
@@ -2160,15 +2200,41 @@ public final class World {
         return velocityBuilder_;
       }
 
+      private float speed_ ;
+      /**
+       * <code>float speed = 3;</code>
+       */
+      public float getSpeed() {
+        return speed_;
+      }
+      /**
+       * <code>float speed = 3;</code>
+       */
+      public Builder setSpeed(float value) {
+        
+        speed_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float speed = 3;</code>
+       */
+      public Builder clearSpeed() {
+        
+        speed_ = 0F;
+        onChanged();
+        return this;
+      }
+
       private float lookRoll_ ;
       /**
-       * <code>float lookRoll = 3;</code>
+       * <code>float lookRoll = 4;</code>
        */
       public float getLookRoll() {
         return lookRoll_;
       }
       /**
-       * <code>float lookRoll = 3;</code>
+       * <code>float lookRoll = 4;</code>
        */
       public Builder setLookRoll(float value) {
         
@@ -2177,7 +2243,7 @@ public final class World {
         return this;
       }
       /**
-       * <code>float lookRoll = 3;</code>
+       * <code>float lookRoll = 4;</code>
        */
       public Builder clearLookRoll() {
         
@@ -2188,13 +2254,13 @@ public final class World {
 
       private float lookYaw_ ;
       /**
-       * <code>float lookYaw = 4;</code>
+       * <code>float lookYaw = 5;</code>
        */
       public float getLookYaw() {
         return lookYaw_;
       }
       /**
-       * <code>float lookYaw = 4;</code>
+       * <code>float lookYaw = 5;</code>
        */
       public Builder setLookYaw(float value) {
         
@@ -2203,7 +2269,7 @@ public final class World {
         return this;
       }
       /**
-       * <code>float lookYaw = 4;</code>
+       * <code>float lookYaw = 5;</code>
        */
       public Builder clearLookYaw() {
         
@@ -2214,13 +2280,13 @@ public final class World {
 
       private boolean inAir_ ;
       /**
-       * <code>bool inAir = 5;</code>
+       * <code>bool inAir = 6;</code>
        */
       public boolean getInAir() {
         return inAir_;
       }
       /**
-       * <code>bool inAir = 5;</code>
+       * <code>bool inAir = 6;</code>
        */
       public Builder setInAir(boolean value) {
         
@@ -2229,7 +2295,7 @@ public final class World {
         return this;
       }
       /**
-       * <code>bool inAir = 5;</code>
+       * <code>bool inAir = 6;</code>
        */
       public Builder clearInAir() {
         
@@ -37452,123 +37518,123 @@ public final class World {
       "nsformUpdate\022\022\n\ntransformX\030\001 \001(\002\022\022\n\ntran" +
       "sformY\030\002 \001(\002\022\022\n\ntransformZ\030\003 \001(\002\022\021\n\trota" +
       "tionZ\030\004 \001(\002\":\n\010Velocity\022\016\n\006valueX\030\001 \001(\005\022" +
-      "\016\n\006valueY\030\002 \001(\005\022\016\n\006valueZ\030\003 \001(\005\"\264\001\n\030Char" +
+      "\016\n\006valueY\030\002 \001(\005\022\016\n\006valueZ\030\003 \001(\005\"\303\001\n\030Char" +
       "acterTransformUpdate\0226\n\ttransform\030\001 \001(\0132" +
       "#.shattered.protocol.TransformUpdate\022.\n\010" +
       "velocity\030\002 \001(\0132\034.shattered.protocol.Velo" +
-      "city\022\020\n\010lookRoll\030\003 \001(\002\022\017\n\007lookYaw\030\004 \001(\002\022" +
-      "\r\n\005inAir\030\005 \001(\010\"\302\002\n\023CharacterModelBlock\022\025" +
-      "\n\rcharacterName\030\001 \001(\t\022\016\n\006isMale\030\002 \001(\010\022\022\n" +
-      "\nheadSlotId\030\003 \001(\005\022\026\n\016necklaceSlotId\030\004 \001(" +
-      "\005\022\027\n\017shouldersSlotId\030\005 \001(\005\022\022\n\nbackSlotId" +
-      "\030\006 \001(\005\022\023\n\013chestSlotId\030\007 \001(\005\022\022\n\nbeltSlotI" +
-      "d\030\010 \001(\005\022\023\n\013pantsSlotId\030\t \001(\005\022\023\n\013wristSlo" +
-      "tId\030\n \001(\005\022\024\n\014glovesSlotId\030\013 \001(\005\022\026\n\016mainH" +
-      "andSlotId\030\014 \001(\005\022\025\n\roffHandSlotId\030\r \001(\005\022\023" +
-      "\n\013bootsSlotId\030\016 \001(\005\"\210\003\n\024CharacterSynchro" +
-      "nize\022\023\n\013clientIndex\030\001 \001(\005\022O\n\016localCharac" +
-      "ter\030\002 \003(\01327.shattered.protocol.Character" +
-      "Synchronize.LocalCharacter\032\211\002\n\016LocalChar" +
-      "acter\022\026\n\016characterIndex\030\001 \001(\005\022\r\n\005flags\030\002" +
-      " \001(\005\0226\n\005model\030\003 \001(\0132\'.shattered.protocol" +
-      ".CharacterModelBlock\022?\n\ttransform\030\004 \001(\0132" +
-      ",.shattered.protocol.CharacterTransformU" +
-      "pdate\022\025\n\rinteractFlags\030\005 \001(\005\022\026\n\016animSequ" +
-      "enceId\030\006 \001(\005\022\022\n\nneedsAdded\030\007 \001(\010\022\024\n\014need" +
-      "sRemoved\030\010 \001(\010\"\325\002\n\016NPCSynchronize\022=\n\010loc" +
-      "alNpc\030\001 \003(\0132+.shattered.protocol.NPCSync" +
-      "hronize.LocalNPC\032\203\002\n\010LocalNPC\022\020\n\010npcInde" +
-      "x\030\001 \001(\005\022\r\n\005npcId\030\002 \001(\005\022\r\n\005flags\030\003 \001(\005\022\017\n" +
-      "\007npcName\030\004 \001(\t\022\016\n\006health\030\005 \001(\005\022\022\n\ntransf" +
-      "ormX\030\006 \001(\005\022\022\n\ntransformY\030\007 \001(\005\022\022\n\ntransf" +
-      "ormZ\030\010 \001(\005\022\021\n\trotationZ\030\t \001(\005\022\026\n\016animSeq" +
-      "uenceId\030\n \001(\005\022\025\n\rinteractFlags\030\013 \001(\005\022\022\n\n" +
-      "needsAdded\030\014 \001(\010\022\024\n\014needsRemoved\030\r \001(\010\"\305" +
-      "\002\n\021ObjectSynchronize\022F\n\013localObject\030\001 \003(" +
-      "\01321.shattered.protocol.ObjectSynchronize" +
-      ".LocalObject\032\347\001\n\013LocalObject\022\023\n\013objectIn" +
-      "dex\030\001 \001(\005\022\020\n\010objectId\030\002 \001(\005\022\r\n\005flags\030\003 \001" +
-      "(\005\022\022\n\nobjectName\030\004 \001(\t\022\022\n\ntransformX\030\005 \001" +
-      "(\005\022\022\n\ntransformY\030\006 \001(\005\022\022\n\ntransformZ\030\007 \001" +
-      "(\005\022\021\n\trotationZ\030\010 \001(\005\022\025\n\rinteractFlags\030\t" +
-      " \001(\005\022\022\n\nneedsAdded\030\n \001(\010\022\024\n\014needsRemoved" +
-      "\030\013 \001(\010\"\'\n\nCharVarInt\022\n\n\002id\030\001 \001(\005\022\r\n\005valu" +
-      "e\030\002 \001(\005\"*\n\rCharVarString\022\n\n\002id\030\001 \001(\005\022\r\n\005" +
-      "value\030\002 \001(\t\"3\n\022ChatRequestMessage\022\014\n\004typ" +
-      "e\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\",\n\013GameMessage\022" +
-      "\014\n\004type\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\"m\n\016Channe" +
-      "lMessage\022\014\n\004type\030\001 \001(\005\022\021\n\tfromIndex\030\002 \001(" +
-      "\005\022\020\n\010fromName\030\003 \001(\t\022\017\n\007message\030\004 \001(\t\022\027\n\017" +
-      "permissionLevel\030\005 \001(\005\"1\n\022SendPrivateMess" +
-      "age\022\n\n\002to\030\001 \001(\t\022\017\n\007message\030\002 \001(\t\"O\n\025Rece" +
-      "ivePrivateMessage\022\014\n\004from\030\001 \001(\t\022\017\n\007messa" +
-      "ge\030\002 \001(\t\022\027\n\017permissionLevel\030\003 \001(\005\"w\n\020Act" +
-      "orInteraction\022\n\n\002id\030\001 \001(\005\022\r\n\005index\030\002 \001(\005" +
-      "\022\020\n\010modifier\030\003 \001(\005\0226\n\ttransform\030\004 \001(\0132#." +
-      "shattered.protocol.TransformUpdate\"\"\n\014St" +
-      "ructWidget\022\022\n\nwidgetName\030\001 \001(\t\"\202\001\n\022Mixed" +
-      "ContainerSlot\022\016\n\006isItem\030\001 \001(\010\0220\n\007ability" +
-      "\030\002 \001(\0132\037.shattered.protocol.AbilitySlot\022" +
-      "*\n\004item\030\003 \001(\0132\034.shattered.protocol.ItemS" +
-      "lot\")\n\013AbilitySlot\022\016\n\006slotId\030\001 \001(\005\022\n\n\002id" +
-      "\030\002 \001(\005\"6\n\010ItemSlot\022\016\n\006slotId\030\001 \001(\005\022\n\n\002id" +
-      "\030\002 \001(\005\022\016\n\006amount\030\003 \001(\005\"1\n\023UpdateActionBa" +
-      "rSlot\022\016\n\006slotId\030\001 \001(\005\022\n\n\002id\030\002 \001(\005\"^\n\027Upd" +
-      "ateItemContainerFull\022\023\n\013containerId\030\001 \001(" +
-      "\005\022.\n\010ItemSlot\030\002 \003(\0132\034.shattered.protocol" +
-      ".ItemSlot\"^\n\027UpdateItemContainerSlot\022\023\n\013" +
-      "containerId\030\001 \001(\005\022.\n\010ItemSlot\030\002 \001(\0132\034.sh" +
-      "attered.protocol.ItemSlot\"j\n\030UpdateMixed" +
-      "ContainerFull\022\023\n\013containerId\030\001 \001(\005\0229\n\tmi" +
-      "xedSlot\030\002 \003(\0132&.shattered.protocol.Mixed" +
-      "ContainerSlot\"_\n\022ShiftContainerSlot\022\023\n\013c" +
-      "ontainerId\030\001 \001(\005\022\022\n\nfromSlotId\030\002 \001(\005\022\020\n\010" +
-      "toSlotId\030\003 \001(\005\022\016\n\006itemId\030\004 \001(\005\"~\n\032ShiftC" +
-      "ontainerSlotToWidget\022\027\n\017fromContainerId\030" +
-      "\001 \001(\005\022\025\n\rtoContainerId\030\002 \001(\005\022\022\n\nfromSlot" +
-      "Id\030\003 \001(\005\022\020\n\010toSlotId\030\004 \001(\005\022\n\n\002id\030\005 \001(\005\"G" +
-      "\n\020UseContainerSlot\022\023\n\013containerId\030\001 \001(\005\022" +
-      "\016\n\006slotId\030\002 \001(\005\022\016\n\006itemId\030\003 \001(\005\"9\n\027SendS" +
-      "impleDialogMessage\022\r\n\005npcId\030\001 \001(\005\022\017\n\007mes" +
-      "sage\030\002 \001(\t\"$\n\017RequestCAbility\022\021\n\tability" +
-      "Id\030\001 \001(\005\"\"\n\rStartCAbility\022\021\n\tabilityId\030\001" +
-      " \001(\005\"<\n\020CAbilityActorHit\022\026\n\016projectileUu" +
-      "id\030\001 \001(\005\022\020\n\010npcIndex\030\002 \001(\005\"x\n\017SpawnProje" +
-      "ctile\022\014\n\004uuid\030\001 \001(\005\0226\n\ttransform\030\002 \001(\0132#" +
-      ".shattered.protocol.TransformUpdate\022\r\n\005s" +
-      "peed\030\003 \001(\005\022\020\n\010duration\030\004 \001(\005\"Y\n\014SpawnEmi" +
-      "tter\022\021\n\temitterId\030\001 \001(\005\0226\n\ttransform\030\002 \001" +
-      "(\0132#.shattered.protocol.TransformUpdate\"" +
-      "6\n\014SingleDialog\022\017\n\007message\030\001 \001(\t\022\025\n\rbutt" +
-      "onMessage\030\002 \001(\t\";\n\021MultiOptionDialog\022\017\n\007" +
-      "message\030\001 \001(\t\022\025\n\rbuttonMessage\030\002 \003(\t\" \n\014" +
-      "DialogOption\022\020\n\010optionId\030\001 \001(\005\"-\n\014PlaySo" +
-      "undCue\022\r\n\005cueId\030\001 \001(\005\022\016\n\006volume\030\002 \001(\002\"6\n" +
-      "\016SetMarkerOnNPC\022\020\n\010npcIndex\030\001 \001(\005\022\022\n\nmar" +
-      "kerType\030\002 \001(\005\"9\n\021UpdateMarkerOnNPC\022\020\n\010np" +
-      "cIndex\030\001 \001(\005\022\022\n\nmarkerType\030\002 \001(\005\"%\n\021Remo" +
-      "veMarkerOnNPC\022\020\n\010npcIndex\030\001 \001(\005\"9\n\021SetMa" +
-      "rkerOnObject\022\020\n\010npcIndex\030\001 \001(\005\022\022\n\nmarker" +
-      "Type\030\002 \001(\005\"<\n\024UpdateMarkerOnObject\022\020\n\010np" +
-      "cIndex\030\001 \001(\005\022\022\n\nmarkerType\030\002 \001(\005\"(\n\024Remo" +
-      "veMarkerOnObject\022\020\n\010npcIndex\030\001 \001(\005\"<\n\024Se" +
-      "tMarkerOnCharacter\022\020\n\010npcIndex\030\001 \001(\005\022\022\n\n" +
-      "markerType\030\002 \001(\005\"?\n\027UpdateMarkerOnCharac" +
-      "ter\022\020\n\010npcIndex\030\001 \001(\005\022\022\n\nmarkerType\030\002 \001(" +
-      "\005\"+\n\027RemoveMarkerOnCharacter\022\020\n\010npcIndex" +
-      "\030\001 \001(\005\"C\n\031DisplayGlobalNotification\022\020\n\010t" +
-      "ypeText\030\001 \001(\t\022\024\n\014headlineText\030\002 \001(\t\"m\n\023D" +
-      "isplayGuideMessage\022\022\n\nrowOneText\030\001 \001(\t\022\026" +
-      "\n\016rowOneSpriteId\030\002 \001(\005\022\022\n\nrowTwoText\030\003 \001" +
-      "(\t\022\026\n\016rowTwoSpriteId\030\004 \001(\005\"Z\n\030DisplayQue" +
-      "stNotification\022\020\n\010spriteId\030\001 \001(\005\022\014\n\004type" +
-      "\030\002 \001(\005\022\020\n\010headline\030\003 \001(\t\022\014\n\004info\030\004 \001(\t\"Q" +
-      "\n\033DisplayAcquiredNotification\022\020\n\010spriteI" +
-      "d\030\001 \001(\005\022\020\n\010headline\030\002 \001(\t\022\016\n\006amount\030\003 \001(" +
-      "\005\"O\n\033DisplayUnlockedNotification\022\020\n\010spri" +
-      "teId\030\001 \001(\005\022\020\n\010headline\030\002 \001(\t\022\014\n\004info\030\003 \001" +
-      "(\tB#\n\036com.shattered.networking.proto\370\001\001b" +
-      "\006proto3"
+      "city\022\r\n\005speed\030\003 \001(\002\022\020\n\010lookRoll\030\004 \001(\002\022\017\n" +
+      "\007lookYaw\030\005 \001(\002\022\r\n\005inAir\030\006 \001(\010\"\302\002\n\023Charac" +
+      "terModelBlock\022\025\n\rcharacterName\030\001 \001(\t\022\016\n\006" +
+      "isMale\030\002 \001(\010\022\022\n\nheadSlotId\030\003 \001(\005\022\026\n\016neck" +
+      "laceSlotId\030\004 \001(\005\022\027\n\017shouldersSlotId\030\005 \001(" +
+      "\005\022\022\n\nbackSlotId\030\006 \001(\005\022\023\n\013chestSlotId\030\007 \001" +
+      "(\005\022\022\n\nbeltSlotId\030\010 \001(\005\022\023\n\013pantsSlotId\030\t " +
+      "\001(\005\022\023\n\013wristSlotId\030\n \001(\005\022\024\n\014glovesSlotId" +
+      "\030\013 \001(\005\022\026\n\016mainHandSlotId\030\014 \001(\005\022\025\n\roffHan" +
+      "dSlotId\030\r \001(\005\022\023\n\013bootsSlotId\030\016 \001(\005\"\210\003\n\024C" +
+      "haracterSynchronize\022\023\n\013clientIndex\030\001 \001(\005" +
+      "\022O\n\016localCharacter\030\002 \003(\01327.shattered.pro" +
+      "tocol.CharacterSynchronize.LocalCharacte" +
+      "r\032\211\002\n\016LocalCharacter\022\026\n\016characterIndex\030\001" +
+      " \001(\005\022\r\n\005flags\030\002 \001(\005\0226\n\005model\030\003 \001(\0132\'.sha" +
+      "ttered.protocol.CharacterModelBlock\022?\n\tt" +
+      "ransform\030\004 \001(\0132,.shattered.protocol.Char" +
+      "acterTransformUpdate\022\025\n\rinteractFlags\030\005 " +
+      "\001(\005\022\026\n\016animSequenceId\030\006 \001(\005\022\022\n\nneedsAdde" +
+      "d\030\007 \001(\010\022\024\n\014needsRemoved\030\010 \001(\010\"\325\002\n\016NPCSyn" +
+      "chronize\022=\n\010localNpc\030\001 \003(\0132+.shattered.p" +
+      "rotocol.NPCSynchronize.LocalNPC\032\203\002\n\010Loca" +
+      "lNPC\022\020\n\010npcIndex\030\001 \001(\005\022\r\n\005npcId\030\002 \001(\005\022\r\n" +
+      "\005flags\030\003 \001(\005\022\017\n\007npcName\030\004 \001(\t\022\016\n\006health\030" +
+      "\005 \001(\005\022\022\n\ntransformX\030\006 \001(\005\022\022\n\ntransformY\030" +
+      "\007 \001(\005\022\022\n\ntransformZ\030\010 \001(\005\022\021\n\trotationZ\030\t" +
+      " \001(\005\022\026\n\016animSequenceId\030\n \001(\005\022\025\n\rinteract" +
+      "Flags\030\013 \001(\005\022\022\n\nneedsAdded\030\014 \001(\010\022\024\n\014needs" +
+      "Removed\030\r \001(\010\"\305\002\n\021ObjectSynchronize\022F\n\013l" +
+      "ocalObject\030\001 \003(\01321.shattered.protocol.Ob" +
+      "jectSynchronize.LocalObject\032\347\001\n\013LocalObj" +
+      "ect\022\023\n\013objectIndex\030\001 \001(\005\022\020\n\010objectId\030\002 \001" +
+      "(\005\022\r\n\005flags\030\003 \001(\005\022\022\n\nobjectName\030\004 \001(\t\022\022\n" +
+      "\ntransformX\030\005 \001(\005\022\022\n\ntransformY\030\006 \001(\005\022\022\n" +
+      "\ntransformZ\030\007 \001(\005\022\021\n\trotationZ\030\010 \001(\005\022\025\n\r" +
+      "interactFlags\030\t \001(\005\022\022\n\nneedsAdded\030\n \001(\010\022" +
+      "\024\n\014needsRemoved\030\013 \001(\010\"\'\n\nCharVarInt\022\n\n\002i" +
+      "d\030\001 \001(\005\022\r\n\005value\030\002 \001(\005\"*\n\rCharVarString\022" +
+      "\n\n\002id\030\001 \001(\005\022\r\n\005value\030\002 \001(\t\"3\n\022ChatReques" +
+      "tMessage\022\014\n\004type\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\"" +
+      ",\n\013GameMessage\022\014\n\004type\030\001 \001(\005\022\017\n\007message\030" +
+      "\002 \001(\t\"m\n\016ChannelMessage\022\014\n\004type\030\001 \001(\005\022\021\n" +
+      "\tfromIndex\030\002 \001(\005\022\020\n\010fromName\030\003 \001(\t\022\017\n\007me" +
+      "ssage\030\004 \001(\t\022\027\n\017permissionLevel\030\005 \001(\005\"1\n\022" +
+      "SendPrivateMessage\022\n\n\002to\030\001 \001(\t\022\017\n\007messag" +
+      "e\030\002 \001(\t\"O\n\025ReceivePrivateMessage\022\014\n\004from" +
+      "\030\001 \001(\t\022\017\n\007message\030\002 \001(\t\022\027\n\017permissionLev" +
+      "el\030\003 \001(\005\"w\n\020ActorInteraction\022\n\n\002id\030\001 \001(\005" +
+      "\022\r\n\005index\030\002 \001(\005\022\020\n\010modifier\030\003 \001(\005\0226\n\ttra" +
+      "nsform\030\004 \001(\0132#.shattered.protocol.Transf" +
+      "ormUpdate\"\"\n\014StructWidget\022\022\n\nwidgetName\030" +
+      "\001 \001(\t\"\202\001\n\022MixedContainerSlot\022\016\n\006isItem\030\001" +
+      " \001(\010\0220\n\007ability\030\002 \001(\0132\037.shattered.protoc" +
+      "ol.AbilitySlot\022*\n\004item\030\003 \001(\0132\034.shattered" +
+      ".protocol.ItemSlot\")\n\013AbilitySlot\022\016\n\006slo" +
+      "tId\030\001 \001(\005\022\n\n\002id\030\002 \001(\005\"6\n\010ItemSlot\022\016\n\006slo" +
+      "tId\030\001 \001(\005\022\n\n\002id\030\002 \001(\005\022\016\n\006amount\030\003 \001(\005\"1\n" +
+      "\023UpdateActionBarSlot\022\016\n\006slotId\030\001 \001(\005\022\n\n\002" +
+      "id\030\002 \001(\005\"^\n\027UpdateItemContainerFull\022\023\n\013c" +
+      "ontainerId\030\001 \001(\005\022.\n\010ItemSlot\030\002 \003(\0132\034.sha" +
+      "ttered.protocol.ItemSlot\"^\n\027UpdateItemCo" +
+      "ntainerSlot\022\023\n\013containerId\030\001 \001(\005\022.\n\010Item" +
+      "Slot\030\002 \001(\0132\034.shattered.protocol.ItemSlot" +
+      "\"j\n\030UpdateMixedContainerFull\022\023\n\013containe" +
+      "rId\030\001 \001(\005\0229\n\tmixedSlot\030\002 \003(\0132&.shattered" +
+      ".protocol.MixedContainerSlot\"_\n\022ShiftCon" +
+      "tainerSlot\022\023\n\013containerId\030\001 \001(\005\022\022\n\nfromS" +
+      "lotId\030\002 \001(\005\022\020\n\010toSlotId\030\003 \001(\005\022\016\n\006itemId\030" +
+      "\004 \001(\005\"~\n\032ShiftContainerSlotToWidget\022\027\n\017f" +
+      "romContainerId\030\001 \001(\005\022\025\n\rtoContainerId\030\002 " +
+      "\001(\005\022\022\n\nfromSlotId\030\003 \001(\005\022\020\n\010toSlotId\030\004 \001(" +
+      "\005\022\n\n\002id\030\005 \001(\005\"G\n\020UseContainerSlot\022\023\n\013con" +
+      "tainerId\030\001 \001(\005\022\016\n\006slotId\030\002 \001(\005\022\016\n\006itemId" +
+      "\030\003 \001(\005\"9\n\027SendSimpleDialogMessage\022\r\n\005npc" +
+      "Id\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\"$\n\017RequestCAbi" +
+      "lity\022\021\n\tabilityId\030\001 \001(\005\"\"\n\rStartCAbility" +
+      "\022\021\n\tabilityId\030\001 \001(\005\"<\n\020CAbilityActorHit\022" +
+      "\026\n\016projectileUuid\030\001 \001(\005\022\020\n\010npcIndex\030\002 \001(" +
+      "\005\"x\n\017SpawnProjectile\022\014\n\004uuid\030\001 \001(\005\0226\n\ttr" +
+      "ansform\030\002 \001(\0132#.shattered.protocol.Trans" +
+      "formUpdate\022\r\n\005speed\030\003 \001(\005\022\020\n\010duration\030\004 " +
+      "\001(\005\"Y\n\014SpawnEmitter\022\021\n\temitterId\030\001 \001(\005\0226" +
+      "\n\ttransform\030\002 \001(\0132#.shattered.protocol.T" +
+      "ransformUpdate\"6\n\014SingleDialog\022\017\n\007messag" +
+      "e\030\001 \001(\t\022\025\n\rbuttonMessage\030\002 \001(\t\";\n\021MultiO" +
+      "ptionDialog\022\017\n\007message\030\001 \001(\t\022\025\n\rbuttonMe" +
+      "ssage\030\002 \003(\t\" \n\014DialogOption\022\020\n\010optionId\030" +
+      "\001 \001(\005\"-\n\014PlaySoundCue\022\r\n\005cueId\030\001 \001(\005\022\016\n\006" +
+      "volume\030\002 \001(\002\"6\n\016SetMarkerOnNPC\022\020\n\010npcInd" +
+      "ex\030\001 \001(\005\022\022\n\nmarkerType\030\002 \001(\005\"9\n\021UpdateMa" +
+      "rkerOnNPC\022\020\n\010npcIndex\030\001 \001(\005\022\022\n\nmarkerTyp" +
+      "e\030\002 \001(\005\"%\n\021RemoveMarkerOnNPC\022\020\n\010npcIndex" +
+      "\030\001 \001(\005\"9\n\021SetMarkerOnObject\022\020\n\010npcIndex\030" +
+      "\001 \001(\005\022\022\n\nmarkerType\030\002 \001(\005\"<\n\024UpdateMarke" +
+      "rOnObject\022\020\n\010npcIndex\030\001 \001(\005\022\022\n\nmarkerTyp" +
+      "e\030\002 \001(\005\"(\n\024RemoveMarkerOnObject\022\020\n\010npcIn" +
+      "dex\030\001 \001(\005\"<\n\024SetMarkerOnCharacter\022\020\n\010npc" +
+      "Index\030\001 \001(\005\022\022\n\nmarkerType\030\002 \001(\005\"?\n\027Updat" +
+      "eMarkerOnCharacter\022\020\n\010npcIndex\030\001 \001(\005\022\022\n\n" +
+      "markerType\030\002 \001(\005\"+\n\027RemoveMarkerOnCharac" +
+      "ter\022\020\n\010npcIndex\030\001 \001(\005\"C\n\031DisplayGlobalNo" +
+      "tification\022\020\n\010typeText\030\001 \001(\t\022\024\n\014headline" +
+      "Text\030\002 \001(\t\"m\n\023DisplayGuideMessage\022\022\n\nrow" +
+      "OneText\030\001 \001(\t\022\026\n\016rowOneSpriteId\030\002 \001(\005\022\022\n" +
+      "\nrowTwoText\030\003 \001(\t\022\026\n\016rowTwoSpriteId\030\004 \001(" +
+      "\005\"Z\n\030DisplayQuestNotification\022\020\n\010spriteI" +
+      "d\030\001 \001(\005\022\014\n\004type\030\002 \001(\005\022\020\n\010headline\030\003 \001(\t\022" +
+      "\014\n\004info\030\004 \001(\t\"Q\n\033DisplayAcquiredNotifica" +
+      "tion\022\020\n\010spriteId\030\001 \001(\005\022\020\n\010headline\030\002 \001(\t" +
+      "\022\016\n\006amount\030\003 \001(\005\"O\n\033DisplayUnlockedNotif" +
+      "ication\022\020\n\010spriteId\030\001 \001(\005\022\020\n\010headline\030\002 " +
+      "\001(\t\022\014\n\004info\030\003 \001(\tB#\n\036com.shattered.netwo" +
+      "rking.proto\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -37599,7 +37665,7 @@ public final class World {
     internal_static_shattered_protocol_CharacterTransformUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_shattered_protocol_CharacterTransformUpdate_descriptor,
-        new java.lang.String[] { "Transform", "Velocity", "LookRoll", "LookYaw", "InAir", });
+        new java.lang.String[] { "Transform", "Velocity", "Speed", "LookRoll", "LookYaw", "InAir", });
     internal_static_shattered_protocol_CharacterModelBlock_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_shattered_protocol_CharacterModelBlock_fieldAccessorTable = new

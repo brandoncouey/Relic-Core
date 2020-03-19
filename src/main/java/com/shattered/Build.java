@@ -61,8 +61,8 @@ public abstract class Build implements ChannelListener {
                 setGrizzlyDatabase(new MySQLManager(DatabaseConfiguration.GRIZZLY_DATABASES));
                 setShatteredDatabase(new MySQLManager(DatabaseConfiguration.SHATTERED_DATABASES));
                 if (ServerConstants.LIVE_DB) {
-                    getGrizzlyDatabase().connect("grizzlyent.cx68oli1tylz.us-east-2.rds.amazonaws.com", "root", "JBGBMC8869");
-                    getShatteredDatabase().connect("shatteredrelics.cx68oli1tylz.us-east-2.rds.amazonaws.com", "admin", "JBGBMC8869");
+                    getGrizzlyDatabase().connect("grizzly.czs21vwqcusd.us-east-2.rds.amazonaws.com", "root", "003786dc003");
+                    getShatteredDatabase().connect("shatteredrelics.czs21vwqcusd.us-east-2.rds.amazonaws.com", "root", "003786dc003");
                 } else {
                     getGrizzlyDatabase().connect("127.0.0.1", "root", "");
                 }

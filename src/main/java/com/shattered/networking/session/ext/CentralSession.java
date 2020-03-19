@@ -81,7 +81,6 @@ public class CentralSession extends Session {
     @Override
     public void disconnect() {
         super.disconnect();
-        //TODO disconnect server from their list.
         SystemLogger.sendSystemMessage("Central Worker Service has been unregistered. Local Address[Address=" + getChannel().localAddress().toString() + "]");
     }
 }

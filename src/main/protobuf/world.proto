@@ -20,9 +20,10 @@ message Velocity {
 message CharacterTransformUpdate {
     TransformUpdate transform = 1;
     Velocity velocity = 2;
-    float lookRoll = 3;
-    float lookYaw = 4;
-    bool inAir = 5;
+    float speed = 3;
+    float lookRoll = 4;
+    float lookYaw = 5;
+    bool inAir = 6;
 }
 
 
