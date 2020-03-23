@@ -172,6 +172,78 @@ public final class PacketOuterClass {
      */
     Shared_Messages(102),
     /**
+     * <code>SMSG_CONNECTED = 103;</code>
+     */
+    SMSG_CONNECTED(103),
+    /**
+     * <code>SMSG_DISCONNECTED = 104;</code>
+     */
+    SMSG_DISCONNECTED(104),
+    /**
+     * <code>SMSG_ACCOUNT_INFORMATION = 105;</code>
+     */
+    SMSG_ACCOUNT_INFORMATION(105),
+    /**
+     * <code>CMSG_LOGIN_REQUEST = 106;</code>
+     */
+    CMSG_LOGIN_REQUEST(106),
+    /**
+     * <code>SMSG_LOGIN_RESPONSE = 107;</code>
+     */
+    SMSG_LOGIN_RESPONSE(107),
+    /**
+     * <code>CMSG_REQUEST_LOGOUT = 108;</code>
+     */
+    CMSG_REQUEST_LOGOUT(108),
+    /**
+     * <code>SMSG_LOGOUT = 109;</code>
+     */
+    SMSG_LOGOUT(109),
+    /**
+     * <code>SMSG_LOGOUT_WITH_RESPONSE = 110;</code>
+     */
+    SMSG_LOGOUT_WITH_RESPONSE(110),
+    /**
+     * <code>CMSG_REQUEST_FRIENDS = 111;</code>
+     */
+    CMSG_REQUEST_FRIENDS(111),
+    /**
+     * <code>CMSG_FRIENDS_LIST = 112;</code>
+     */
+    CMSG_FRIENDS_LIST(112),
+    /**
+     * <code>CMSG_PRIVATE_MESSAGE = 113;</code>
+     */
+    CMSG_PRIVATE_MESSAGE(113),
+    /**
+     * <code>SMSG_PRIVATE_MESSAGE = 114;</code>
+     */
+    SMSG_PRIVATE_MESSAGE(114),
+    /**
+     * <code>SMSG_FRIENDS_LIST = 115;</code>
+     */
+    SMSG_FRIENDS_LIST(115),
+    /**
+     * <code>SMSG_UPDATE_FRIEND = 116;</code>
+     */
+    SMSG_UPDATE_FRIEND(116),
+    /**
+     * <code>CMSG_ADD_FRIEND = 117;</code>
+     */
+    CMSG_ADD_FRIEND(117),
+    /**
+     * <code>CMSG_REMOVE_FRIEND = 118;</code>
+     */
+    CMSG_REMOVE_FRIEND(118),
+    /**
+     * <code>CMSG_IGNORE_CHARACTER = 119;</code>
+     */
+    CMSG_IGNORE_CHARACTER(119),
+    /**
+     * <code>SMSG_WORLD_LOGIN_TRANSFER = 120;</code>
+     */
+    SMSG_WORLD_LOGIN_TRANSFER(120),
+    /**
      * <code>Shared_EO_Messages = 151;</code>
      */
     Shared_EO_Messages(151),
@@ -355,6 +427,78 @@ public final class PacketOuterClass {
      */
     public static final int Shared_Messages_VALUE = 102;
     /**
+     * <code>SMSG_CONNECTED = 103;</code>
+     */
+    public static final int SMSG_CONNECTED_VALUE = 103;
+    /**
+     * <code>SMSG_DISCONNECTED = 104;</code>
+     */
+    public static final int SMSG_DISCONNECTED_VALUE = 104;
+    /**
+     * <code>SMSG_ACCOUNT_INFORMATION = 105;</code>
+     */
+    public static final int SMSG_ACCOUNT_INFORMATION_VALUE = 105;
+    /**
+     * <code>CMSG_LOGIN_REQUEST = 106;</code>
+     */
+    public static final int CMSG_LOGIN_REQUEST_VALUE = 106;
+    /**
+     * <code>SMSG_LOGIN_RESPONSE = 107;</code>
+     */
+    public static final int SMSG_LOGIN_RESPONSE_VALUE = 107;
+    /**
+     * <code>CMSG_REQUEST_LOGOUT = 108;</code>
+     */
+    public static final int CMSG_REQUEST_LOGOUT_VALUE = 108;
+    /**
+     * <code>SMSG_LOGOUT = 109;</code>
+     */
+    public static final int SMSG_LOGOUT_VALUE = 109;
+    /**
+     * <code>SMSG_LOGOUT_WITH_RESPONSE = 110;</code>
+     */
+    public static final int SMSG_LOGOUT_WITH_RESPONSE_VALUE = 110;
+    /**
+     * <code>CMSG_REQUEST_FRIENDS = 111;</code>
+     */
+    public static final int CMSG_REQUEST_FRIENDS_VALUE = 111;
+    /**
+     * <code>CMSG_FRIENDS_LIST = 112;</code>
+     */
+    public static final int CMSG_FRIENDS_LIST_VALUE = 112;
+    /**
+     * <code>CMSG_PRIVATE_MESSAGE = 113;</code>
+     */
+    public static final int CMSG_PRIVATE_MESSAGE_VALUE = 113;
+    /**
+     * <code>SMSG_PRIVATE_MESSAGE = 114;</code>
+     */
+    public static final int SMSG_PRIVATE_MESSAGE_VALUE = 114;
+    /**
+     * <code>SMSG_FRIENDS_LIST = 115;</code>
+     */
+    public static final int SMSG_FRIENDS_LIST_VALUE = 115;
+    /**
+     * <code>SMSG_UPDATE_FRIEND = 116;</code>
+     */
+    public static final int SMSG_UPDATE_FRIEND_VALUE = 116;
+    /**
+     * <code>CMSG_ADD_FRIEND = 117;</code>
+     */
+    public static final int CMSG_ADD_FRIEND_VALUE = 117;
+    /**
+     * <code>CMSG_REMOVE_FRIEND = 118;</code>
+     */
+    public static final int CMSG_REMOVE_FRIEND_VALUE = 118;
+    /**
+     * <code>CMSG_IGNORE_CHARACTER = 119;</code>
+     */
+    public static final int CMSG_IGNORE_CHARACTER_VALUE = 119;
+    /**
+     * <code>SMSG_WORLD_LOGIN_TRANSFER = 120;</code>
+     */
+    public static final int SMSG_WORLD_LOGIN_TRANSFER_VALUE = 120;
+    /**
      * <code>Shared_EO_Messages = 151;</code>
      */
     public static final int Shared_EO_Messages_VALUE = 151;
@@ -434,6 +578,24 @@ public final class PacketOuterClass {
         case 77: return Channel_Messages;
         case 101: return Channel_EO_Messages;
         case 102: return Shared_Messages;
+        case 103: return SMSG_CONNECTED;
+        case 104: return SMSG_DISCONNECTED;
+        case 105: return SMSG_ACCOUNT_INFORMATION;
+        case 106: return CMSG_LOGIN_REQUEST;
+        case 107: return SMSG_LOGIN_RESPONSE;
+        case 108: return CMSG_REQUEST_LOGOUT;
+        case 109: return SMSG_LOGOUT;
+        case 110: return SMSG_LOGOUT_WITH_RESPONSE;
+        case 111: return CMSG_REQUEST_FRIENDS;
+        case 112: return CMSG_FRIENDS_LIST;
+        case 113: return CMSG_PRIVATE_MESSAGE;
+        case 114: return SMSG_PRIVATE_MESSAGE;
+        case 115: return SMSG_FRIENDS_LIST;
+        case 116: return SMSG_UPDATE_FRIEND;
+        case 117: return CMSG_ADD_FRIEND;
+        case 118: return CMSG_REMOVE_FRIEND;
+        case 119: return CMSG_IGNORE_CHARACTER;
+        case 120: return SMSG_WORLD_LOGIN_TRANSFER;
         case 151: return Shared_EO_Messages;
         case 152: return Shattered_Realm_Messages;
         case 251: return Shattered_Realm_EO_Messages;
@@ -2053,7 +2215,7 @@ public final class PacketOuterClass {
       "\n\014packet.proto\022\022shattered.protocol\"E\n\006Pa" +
       "cket\022*\n\006opcode\030\001 \001(\0162\032.shattered.protoco" +
       "l.Opcode\022\017\n\007payload\030\002 \001(\014\"\016\n\014EmptyPayloa" +
-      "d\" \n\rStringPayload\022\017\n\007payload\030\001 \001(\t*\234\007\n\006" +
+      "d\" \n\rStringPayload\022\017\n\007payload\030\001 \001(\t*\341\n\n\006" +
       "Opcode\022\022\n\016INVALID_OPCODE\020\000\022\016\n\nU_Messages" +
       "\020\001\022\n\n\006U_Ping\020\002\022\027\n\023U_ServerPerformance\020\003\022" +
       "\021\n\rU_EO_Messages\020\033\022\022\n\016Proxy_Messages\020\034\022\024" +
@@ -2072,13 +2234,24 @@ public final class PacketOuterClass {
       "mation\020:\022\025\n\021S_UpdateWorldList\020;\022\026\n\022S_Upd" +
       "ateWorldEntry\020<\022\030\n\024Sharding_EO_Messages\020" +
       "L\022\024\n\020Channel_Messages\020M\022\027\n\023Channel_EO_Me" +
-      "ssages\020e\022\023\n\017Shared_Messages\020f\022\027\n\022Shared_" +
-      "EO_Messages\020\227\001\022\035\n\030Shattered_Realm_Messag" +
-      "es\020\230\001\022 \n\033Shattered_Realm_EO_Messages\020\373\001\022" +
-      "\035\n\030Shattered_World_Messages\020\374\001\022 \n\033Shatte" +
-      "red_World_EO_Messages\020\221\003\"\004\010\004\020\032\"\004\010)\0202\"\004\010=" +
-      "\020KB#\n\036com.shattered.networking.proto\370\001\001b" +
-      "\006proto3"
+      "ssages\020e\022\023\n\017Shared_Messages\020f\022\022\n\016SMSG_CO" +
+      "NNECTED\020g\022\025\n\021SMSG_DISCONNECTED\020h\022\034\n\030SMSG" +
+      "_ACCOUNT_INFORMATION\020i\022\026\n\022CMSG_LOGIN_REQ" +
+      "UEST\020j\022\027\n\023SMSG_LOGIN_RESPONSE\020k\022\027\n\023CMSG_" +
+      "REQUEST_LOGOUT\020l\022\017\n\013SMSG_LOGOUT\020m\022\035\n\031SMS" +
+      "G_LOGOUT_WITH_RESPONSE\020n\022\030\n\024CMSG_REQUEST" +
+      "_FRIENDS\020o\022\025\n\021CMSG_FRIENDS_LIST\020p\022\030\n\024CMS" +
+      "G_PRIVATE_MESSAGE\020q\022\030\n\024SMSG_PRIVATE_MESS" +
+      "AGE\020r\022\025\n\021SMSG_FRIENDS_LIST\020s\022\026\n\022SMSG_UPD" +
+      "ATE_FRIEND\020t\022\023\n\017CMSG_ADD_FRIEND\020u\022\026\n\022CMS" +
+      "G_REMOVE_FRIEND\020v\022\031\n\025CMSG_IGNORE_CHARACT" +
+      "ER\020w\022\035\n\031SMSG_WORLD_LOGIN_TRANSFER\020x\022\027\n\022S" +
+      "hared_EO_Messages\020\227\001\022\035\n\030Shattered_Realm_" +
+      "Messages\020\230\001\022 \n\033Shattered_Realm_EO_Messag" +
+      "es\020\373\001\022\035\n\030Shattered_World_Messages\020\374\001\022 \n\033" +
+      "Shattered_World_EO_Messages\020\221\003\"\004\010\004\020\032\"\004\010)" +
+      "\0202\"\004\010=\020K\"\005\010y\020\226\001B#\n\036com.shattered.network" +
+      "ing.proto\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

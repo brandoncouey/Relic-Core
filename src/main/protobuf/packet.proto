@@ -10,6 +10,9 @@ option cc_enable_arenas = true;
 * P_ = Proxy
 * U_ = Universal
 * S_ = Shard
+* C_ = Channel
+* CMSG = Client Message
+* SMSG = Server Message
 */
 
 enum Opcode {
@@ -58,6 +61,25 @@ enum Opcode {
 
     //Shared Messages (Shared between realm and world)
     Shared_Messages = 102;
+    SMSG_CONNECTED = 103;
+    SMSG_DISCONNECTED = 104;
+    SMSG_ACCOUNT_INFORMATION = 105;
+    CMSG_LOGIN_REQUEST = 106;
+    SMSG_LOGIN_RESPONSE = 107;
+    CMSG_REQUEST_LOGOUT = 108;
+    SMSG_LOGOUT = 109;
+    SMSG_LOGOUT_WITH_RESPONSE = 110;
+    CMSG_REQUEST_FRIENDS = 111;
+    CMSG_FRIENDS_LIST = 112;
+    CMSG_PRIVATE_MESSAGE = 113;
+    SMSG_PRIVATE_MESSAGE = 114;
+    SMSG_FRIENDS_LIST = 115;
+    SMSG_UPDATE_FRIEND = 116;
+    CMSG_ADD_FRIEND = 117;
+    CMSG_REMOVE_FRIEND = 118;
+    CMSG_IGNORE_CHARACTER = 119;
+    SMSG_WORLD_LOGIN_TRANSFER = 120;
+    reserved 121 to 150;
     Shared_EO_Messages = 151;
 
     //Shattered Realm Messages
