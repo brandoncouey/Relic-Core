@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'relic-core'
-version '0.0.9'
+version '0.0.7'
 
 sourceCompatibility = 1.8
 
