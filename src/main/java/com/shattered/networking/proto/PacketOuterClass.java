@@ -160,6 +160,42 @@ public final class PacketOuterClass {
      */
     Channel_Messages(77),
     /**
+     * <code>C_Register_Player = 78;</code>
+     */
+    C_Register_Player(78),
+    /**
+     * <code>C_Unregister_Player = 79;</code>
+     */
+    C_Unregister_Player(79),
+    /**
+     * <code>C_OnlineStatus_Player = 80;</code>
+     */
+    C_OnlineStatus_Player(80),
+    /**
+     * <code>C_OfflineStatus_Player = 81;</code>
+     */
+    C_OfflineStatus_Player(81),
+    /**
+     * <code>C_Friends_List = 82;</code>
+     */
+    C_Friends_List(82),
+    /**
+     * <code>C_AddFriend = 83;</code>
+     */
+    C_AddFriend(83),
+    /**
+     * <code>C_RemoveFriend = 84;</code>
+     */
+    C_RemoveFriend(84),
+    /**
+     * <code>C_AddIgnore = 85;</code>
+     */
+    C_AddIgnore(85),
+    /**
+     * <code>C_RemoveIgnore = 86;</code>
+     */
+    C_RemoveIgnore(86),
+    /**
      * <code>Channel_EO_Messages = 101;</code>
      */
     Channel_EO_Messages(101),
@@ -415,6 +451,42 @@ public final class PacketOuterClass {
      */
     public static final int Channel_Messages_VALUE = 77;
     /**
+     * <code>C_Register_Player = 78;</code>
+     */
+    public static final int C_Register_Player_VALUE = 78;
+    /**
+     * <code>C_Unregister_Player = 79;</code>
+     */
+    public static final int C_Unregister_Player_VALUE = 79;
+    /**
+     * <code>C_OnlineStatus_Player = 80;</code>
+     */
+    public static final int C_OnlineStatus_Player_VALUE = 80;
+    /**
+     * <code>C_OfflineStatus_Player = 81;</code>
+     */
+    public static final int C_OfflineStatus_Player_VALUE = 81;
+    /**
+     * <code>C_Friends_List = 82;</code>
+     */
+    public static final int C_Friends_List_VALUE = 82;
+    /**
+     * <code>C_AddFriend = 83;</code>
+     */
+    public static final int C_AddFriend_VALUE = 83;
+    /**
+     * <code>C_RemoveFriend = 84;</code>
+     */
+    public static final int C_RemoveFriend_VALUE = 84;
+    /**
+     * <code>C_AddIgnore = 85;</code>
+     */
+    public static final int C_AddIgnore_VALUE = 85;
+    /**
+     * <code>C_RemoveIgnore = 86;</code>
+     */
+    public static final int C_RemoveIgnore_VALUE = 86;
+    /**
      * <code>Channel_EO_Messages = 101;</code>
      */
     public static final int Channel_EO_Messages_VALUE = 101;
@@ -576,6 +648,15 @@ public final class PacketOuterClass {
         case 60: return S_UpdateWorldEntry;
         case 76: return Sharding_EO_Messages;
         case 77: return Channel_Messages;
+        case 78: return C_Register_Player;
+        case 79: return C_Unregister_Player;
+        case 80: return C_OnlineStatus_Player;
+        case 81: return C_OfflineStatus_Player;
+        case 82: return C_Friends_List;
+        case 83: return C_AddFriend;
+        case 84: return C_RemoveFriend;
+        case 85: return C_AddIgnore;
+        case 86: return C_RemoveIgnore;
         case 101: return Channel_EO_Messages;
         case 102: return Shared_Messages;
         case 103: return SMSG_CONNECTED;
@@ -2215,7 +2296,7 @@ public final class PacketOuterClass {
       "\n\014packet.proto\022\022shattered.protocol\"E\n\006Pa" +
       "cket\022*\n\006opcode\030\001 \001(\0162\032.shattered.protoco" +
       "l.Opcode\022\017\n\007payload\030\002 \001(\014\"\016\n\014EmptyPayloa" +
-      "d\" \n\rStringPayload\022\017\n\007payload\030\001 \001(\t*\341\n\n\006" +
+      "d\" \n\rStringPayload\022\017\n\007payload\030\001 \001(\t*\254\014\n\006" +
       "Opcode\022\022\n\016INVALID_OPCODE\020\000\022\016\n\nU_Messages" +
       "\020\001\022\n\n\006U_Ping\020\002\022\027\n\023U_ServerPerformance\020\003\022" +
       "\021\n\rU_EO_Messages\020\033\022\022\n\016Proxy_Messages\020\034\022\024" +
@@ -2233,25 +2314,30 @@ public final class PacketOuterClass {
       "\0208\022\024\n\020S_OpenConnection\0209\022\026\n\022S_WorldInfor" +
       "mation\020:\022\025\n\021S_UpdateWorldList\020;\022\026\n\022S_Upd" +
       "ateWorldEntry\020<\022\030\n\024Sharding_EO_Messages\020" +
-      "L\022\024\n\020Channel_Messages\020M\022\027\n\023Channel_EO_Me" +
-      "ssages\020e\022\023\n\017Shared_Messages\020f\022\022\n\016SMSG_CO" +
-      "NNECTED\020g\022\025\n\021SMSG_DISCONNECTED\020h\022\034\n\030SMSG" +
-      "_ACCOUNT_INFORMATION\020i\022\026\n\022CMSG_LOGIN_REQ" +
-      "UEST\020j\022\027\n\023SMSG_LOGIN_RESPONSE\020k\022\027\n\023CMSG_" +
-      "REQUEST_LOGOUT\020l\022\017\n\013SMSG_LOGOUT\020m\022\035\n\031SMS" +
-      "G_LOGOUT_WITH_RESPONSE\020n\022\030\n\024CMSG_REQUEST" +
-      "_FRIENDS\020o\022\025\n\021CMSG_FRIENDS_LIST\020p\022\030\n\024CMS" +
-      "G_PRIVATE_MESSAGE\020q\022\030\n\024SMSG_PRIVATE_MESS" +
-      "AGE\020r\022\025\n\021SMSG_FRIENDS_LIST\020s\022\026\n\022SMSG_UPD" +
-      "ATE_FRIEND\020t\022\023\n\017CMSG_ADD_FRIEND\020u\022\026\n\022CMS" +
-      "G_REMOVE_FRIEND\020v\022\031\n\025CMSG_IGNORE_CHARACT" +
-      "ER\020w\022\035\n\031SMSG_WORLD_LOGIN_TRANSFER\020x\022\027\n\022S" +
-      "hared_EO_Messages\020\227\001\022\035\n\030Shattered_Realm_" +
-      "Messages\020\230\001\022 \n\033Shattered_Realm_EO_Messag" +
-      "es\020\373\001\022\035\n\030Shattered_World_Messages\020\374\001\022 \n\033" +
-      "Shattered_World_EO_Messages\020\221\003\"\004\010\004\020\032\"\004\010)" +
-      "\0202\"\004\010=\020K\"\005\010y\020\226\001B#\n\036com.shattered.network" +
-      "ing.proto\370\001\001b\006proto3"
+      "L\022\024\n\020Channel_Messages\020M\022\025\n\021C_Register_Pl" +
+      "ayer\020N\022\027\n\023C_Unregister_Player\020O\022\031\n\025C_Onl" +
+      "ineStatus_Player\020P\022\032\n\026C_OfflineStatus_Pl" +
+      "ayer\020Q\022\022\n\016C_Friends_List\020R\022\017\n\013C_AddFrien" +
+      "d\020S\022\022\n\016C_RemoveFriend\020T\022\017\n\013C_AddIgnore\020U" +
+      "\022\022\n\016C_RemoveIgnore\020V\022\027\n\023Channel_EO_Messa" +
+      "ges\020e\022\023\n\017Shared_Messages\020f\022\022\n\016SMSG_CONNE" +
+      "CTED\020g\022\025\n\021SMSG_DISCONNECTED\020h\022\034\n\030SMSG_AC" +
+      "COUNT_INFORMATION\020i\022\026\n\022CMSG_LOGIN_REQUES" +
+      "T\020j\022\027\n\023SMSG_LOGIN_RESPONSE\020k\022\027\n\023CMSG_REQ" +
+      "UEST_LOGOUT\020l\022\017\n\013SMSG_LOGOUT\020m\022\035\n\031SMSG_L" +
+      "OGOUT_WITH_RESPONSE\020n\022\030\n\024CMSG_REQUEST_FR" +
+      "IENDS\020o\022\025\n\021CMSG_FRIENDS_LIST\020p\022\030\n\024CMSG_P" +
+      "RIVATE_MESSAGE\020q\022\030\n\024SMSG_PRIVATE_MESSAGE" +
+      "\020r\022\025\n\021SMSG_FRIENDS_LIST\020s\022\026\n\022SMSG_UPDATE" +
+      "_FRIEND\020t\022\023\n\017CMSG_ADD_FRIEND\020u\022\026\n\022CMSG_R" +
+      "EMOVE_FRIEND\020v\022\031\n\025CMSG_IGNORE_CHARACTER\020" +
+      "w\022\035\n\031SMSG_WORLD_LOGIN_TRANSFER\020x\022\027\n\022Shar" +
+      "ed_EO_Messages\020\227\001\022\035\n\030Shattered_Realm_Mes" +
+      "sages\020\230\001\022 \n\033Shattered_Realm_EO_Messages\020" +
+      "\373\001\022\035\n\030Shattered_World_Messages\020\374\001\022 \n\033Sha" +
+      "ttered_World_EO_Messages\020\221\003\"\004\010\004\020\032\"\004\010)\0202\"" +
+      "\004\010=\020K\"\004\010W\020d\"\005\010y\020\226\001B#\n\036com.shattered.netw" +
+      "orking.proto\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

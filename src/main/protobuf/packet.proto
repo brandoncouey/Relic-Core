@@ -57,6 +57,16 @@ enum Opcode {
 
     //Channel Messages (Shared between (world/realm) and channel)
     Channel_Messages = 77;
+    C_Register_Player = 78;
+    C_Unregister_Player = 79;
+    C_OnlineStatus_Player = 80;
+    C_OfflineStatus_Player = 81;
+    C_Friends_List = 82;
+    C_AddFriend = 83;
+    C_RemoveFriend = 84;
+    C_AddIgnore = 85;
+    C_RemoveIgnore = 86;
+    reserved 87 to 100;
     Channel_EO_Messages = 101;
 
     //Shared Messages (Shared between realm and world)
